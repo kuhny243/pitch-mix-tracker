@@ -1,0 +1,27 @@
+name: nightly-update
+on:
+  schedule:          # UTC cron → 10:30 UTC ≈ 3:30 AM Phoenix
+    - cron:  '30 10 * * *'
+  workflow_dispatch: # run manually with "Run workflow" button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install deps
+      run: pip install pybaseball pandas --quiet
+
+    - name: Run updater
+      run: python update_pitchers.py
+
+    - name: Commit updated CSVs
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Nightly auto-update"
