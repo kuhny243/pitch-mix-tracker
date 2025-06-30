@@ -1,18 +1,60 @@
-# update_pitchers.py  – four buckets + summary (fixed + regular season only)
-from pybaseball import statcast_pitcher
+# update_pitchers.py  – 19-pitcher starter list
+from pybaseball import statcast_pitcher, playerid_lookup
 import pandas as pd
 from datetime import date
 
 START = "2025-03-01"
 END   = date.today().isoformat()
 
-PITCHERS = {
-    "Zack_Wheeler": 554430,
-    # Add more pitchers here if needed
-}
+# Paste names (one per line).  Zack Wheeler is skipped automatically.
+NAME_LIST = """
+Colin Rea
+Paul Skenes
+Seth Lugo
+Simeon Woods Richardson
+Ben Lively
+Zack Wheeler
+David Peterson
+Tyler Anderson
+Bryan Bello
+Andrew Abbott
+Sonny Gray
+Jose Berrios
+Mitch Keller
+Ben Brown
+Kyle Freeland
+Framber Valdez
+Jose Soriano
+Bryan Woo
+Brandon Pfaadt
+Kevin Gausman
+""".strip().splitlines()
 
+# ── Clean list ──────────────────────────────────────────────────────────
+clean_names = {n.strip() for n in NAME_LIST if n.strip() and n.strip() != "Zack Wheeler"}
+
+# ── Resolve each name → MLBAM ID ────────────────────────────────────────
+def resolve_ids(names):
+    mapping = {}
+    for full_name in sorted(names):
+        try:
+            last, first = full_name.split()[-1], full_name.split()[0]
+            lookup = playerid_lookup(last, first)
+            if not lookup.empty:
+                pid = int(lookup.key_mlbam.values[0])
+                mapping[full_name.replace(" ", "_")] = pid
+                print(f"Resolved {full_name} → {pid}")
+            else:
+                print(f"⚠️  No ID found for {full_name}")
+        except Exception as e:
+            print(f"⚠️  Lookup failed for {full_name}: {e}")
+    return mapping
+
+PITCHERS = resolve_ids(clean_names)
+print(f"Tracking {len(PITCHERS)} pitchers")
+
+# ── Helper functions (unchanged) ────────────────────────────────────────
 def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
-    """Add pa_order (1,2,3…) within each half-inning from at_bat_number."""
     df["pa_order"] = (
         df.groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
           .rank(method="dense")
@@ -21,7 +63,6 @@ def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 def bucket(row) -> str | None:
-    """Return one of the four target buckets or None."""
     if not (row.pitch_number == 1 and row.balls == 0 and row.strikes == 0):
         return None
     if row.inning == 1 and row.pa_order in (2, 3):
@@ -30,13 +71,13 @@ def bucket(row) -> str | None:
         return f"Inning_{int(row.inning)}_leadoff"
     return None
 
+# ── Main loop ───────────────────────────────────────────────────────────
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
     df = statcast_pitcher(START, END, pid)
 
-    # keep only regular-season games (game_type == "R")
+    # regular-season only
     df = df[df.game_type == "R"]
-
     print("downloaded rows:", len(df))
     if df.empty:
         continue
@@ -55,12 +96,10 @@ for name, pid in PITCHERS.items():
           .sort_values(["game_date", "game_pk"])
     )
 
-    # detailed CSV
-    detail_file = f"{name}_first_pitch.csv"
-    df_out.to_csv(detail_file, index=False)
-    print(f"→ wrote {detail_file}  ({len(df_out)} rows)")
+    # detailed file
+    df_out.to_csv(f"{name}_first_pitch.csv", index=False)
 
-    # summary CSV (count + pct within each bucket)
+    # summary file (count + %)
     summary = (
         df_out.groupby(["bucket", "pitch_name"])
               .size()
@@ -70,7 +109,4 @@ for name, pid in PITCHERS.items():
         summary.groupby("bucket")["count"]
                .transform(lambda x: (x / x.sum() * 100).round(1))
     )
-
-    summary_file = f"{name}_first_pitch_summary.csv"
-    summary.to_csv(summary_file, index=False)
-    print(f"→ wrote {summary_file}  ({len(summary)} rows)")
+    summary.to_csv(f"{name}_first_pitch_summary.csv", index=False)
