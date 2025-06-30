@@ -1,5 +1,5 @@
 # update_pitchers.py
-# 118 pitchers • starter-only • 5 buckets incl. Leadoff_2nd_PA • auto-retry
+# 118 pitchers • starter-only • FIVE buckets (incl. Leadoff_2nd_PA) • auto-retry
 
 from pybaseball import statcast_pitcher
 import pandas as pd, time
@@ -9,7 +9,7 @@ from datetime import date
 START = "2025-03-01"
 END   = date.today().isoformat()
 
-# ── 1. Pitcher → MLBAM ID mapping (duplicates removed) ─────────────────
+# ── 1. Pitcher → MLBAM ID mapping ──────────────────────────────────────
 PITCHERS = {
     "Colin_Rea": 607067,
     "Paul_Skenes": 694973,
@@ -41,7 +41,7 @@ PITCHERS = {
     "Matthew_Boyd": 571440,
     "Hunter_Greene": 668881,
     "Griffin_Canning": 656288,
-    "Shane_Smith": 681343,              # TODO: update when official ID assigned
+    "Shane_Smith": 681343,          # TODO: replace when official ID issued
     "Landon_Roupp": 677974,
     "Freddy_Peralta": 642547,
     "Drew_Rasmussen": 656876,
@@ -113,7 +113,7 @@ PITCHERS = {
     "Nick_Martinez": 607212,
     "Taj_Bradley": 671737,
     "Chris_Paddack": 663978,
-    "Luis_Castillo": 664057,
+    "Luis_Castillo": 622491,
     "Tomoyuki_Sugano": 608372,
     "Chase_Dollander": 801403,
     "Tylor_Megill": 656731,
@@ -137,38 +137,54 @@ PITCHERS = {
 
 # ── 2. Helper functions ────────────────────────────────────────────────
 def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
+    """Add pa_order = 1,2,3… within each half-inning."""
     df["pa_order"] = (
-        df.groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
-          .rank(method="dense").astype(int)
+        df.sort_values("at_bat_number")
+          .groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
+          .rank(method="dense")
+          .astype(int)
     )
     return df
 
 def add_leadoff_seq(df: pd.DataFrame) -> pd.DataFrame:
     """
     leadoff_seq:
-      0 = first PA of lineup spot-1
-      1 = second PA (target bucket)
-     -1 = everything else
-    Works even if lineup-order columns are missing.
+      0 → first time lineup spot-1 bats
+      1 → second time  (bucket: Leadoff_2nd_PA)
+     -1 → all other PAs
+    Works even when lineup-order columns are missing.
     """
     df["leadoff_seq"] = -1
 
-    # Try normal lineup columns first
-    for col in ["batting_order", "bat_order", "batting_order_numeric", "batting_position"]:
+    # Preferred: a real lineup-order column
+    for col in ["batting_order", "bat_order",
+                "batting_order_numeric", "batting_position"]:
         if col in df.columns:
             mask = df[col] == 1
-            df.loc[mask, "leadoff_seq"] = df.loc[mask].groupby("game_pk").cumcount()
+            df.loc[mask, "leadoff_seq"] = (
+                df.loc[mask]
+                  .sort_values("at_bat_number")
+                  .groupby("game_pk")["at_bat_number"]
+                  .rank(method="first")
+                  .astype(int) - 1
+            )
             return df
 
-    # Fallback: find the game’s first batter, tag their second PA
-    leadoff_ids = (
+    # Fallback: detect leadoff batter by first PA of game
+    first_batters = (
         df.loc[(df.inning == 1) & (df.pa_order == 1)]
           .groupby("game_pk")["batter"]
           .first()
     )
-    for gpk, batter_id in leadoff_ids.items():
+    for gpk, batter_id in first_batters.items():
         mask = (df.game_pk == gpk) & (df.batter == batter_id)
-        df.loc[mask, "leadoff_seq"] = df.loc[mask].groupby("game_pk").cumcount()
+        df.loc[mask, "leadoff_seq"] = (
+            df.loc[mask]
+              .sort_values("at_bat_number")
+              .groupby("game_pk")["at_bat_number"]
+              .rank(method="first")
+              .astype(int) - 1
+        )
     return df
 
 def bucket(row) -> str | None:
@@ -194,7 +210,7 @@ for name, pid in PITCHERS.items():
         except (ParserError, EmptyDataError) as e:
             print(f"⚠️  Parse error (attempt {attempt}) – {e}")
             if attempt == 2:
-                print("   Skipping pitcher.")
+                print("   Skipping.")
                 df = pd.DataFrame()
             else:
                 time.sleep(3)
@@ -205,6 +221,7 @@ for name, pid in PITCHERS.items():
     df = add_pa_order(df)
     df = add_leadoff_seq(df)
 
+    # Starter filter: pitcher faced first PA of own half-inning
     starter_games = df.loc[(df.inning == 1) & (df.pa_order == 1), "game_pk"].unique()
     df = df[df.game_pk.isin(starter_games)]
     if df.empty:
