@@ -1,4 +1,4 @@
-# update_pitchers.py  – 19-pitcher starter list
+# update_pitchers.py  – starter-only (must face 1st batter), four buckets + summary
 from pybaseball import statcast_pitcher, playerid_lookup
 import pandas as pd
 from datetime import date
@@ -6,7 +6,6 @@ from datetime import date
 START = "2025-03-01"
 END   = date.today().isoformat()
 
-# Paste names (one per line).  Zack Wheeler is skipped automatically.
 NAME_LIST = """
 Colin Rea
 Paul Skenes
@@ -30,39 +29,29 @@ Brandon Pfaadt
 Kevin Gausman
 """.strip().splitlines()
 
-# ── Clean list ──────────────────────────────────────────────────────────
 clean_names = {n.strip() for n in NAME_LIST if n.strip() and n.strip() != "Zack Wheeler"}
 
-# ── Resolve each name → MLBAM ID ────────────────────────────────────────
 def resolve_ids(names):
     mapping = {}
-    for full_name in sorted(names):
-        try:
-            last, first = full_name.split()[-1], full_name.split()[0]
-            lookup = playerid_lookup(last, first)
-            if not lookup.empty:
-                pid = int(lookup.key_mlbam.values[0])
-                mapping[full_name.replace(" ", "_")] = pid
-                print(f"Resolved {full_name} → {pid}")
-            else:
-                print(f"⚠️  No ID found for {full_name}")
-        except Exception as e:
-            print(f"⚠️  Lookup failed for {full_name}: {e}")
+    for full in sorted(names):
+        last, first = full.split()[-1], full.split()[0]
+        lookup = playerid_lookup(last, first)
+        if not lookup.empty:
+            mapping[full.replace(" ", "_")] = int(lookup.key_mlbam.iloc[0])
     return mapping
 
 PITCHERS = resolve_ids(clean_names)
 print(f"Tracking {len(PITCHERS)} pitchers")
 
-# ── Helper functions (unchanged) ────────────────────────────────────────
-def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
+# ── helpers ────────────────────────────────────────────────────────────
+def add_pa_order(df):
     df["pa_order"] = (
         df.groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
-          .rank(method="dense")
-          .astype(int)
+          .rank(method="dense").astype(int)
     )
     return df
 
-def bucket(row) -> str | None:
+def bucket(row):
     if not (row.pitch_number == 1 and row.balls == 0 and row.strikes == 0):
         return None
     if row.inning == 1 and row.pa_order in (2, 3):
@@ -71,21 +60,26 @@ def bucket(row) -> str | None:
         return f"Inning_{int(row.inning)}_leadoff"
     return None
 
-# ── Main loop ───────────────────────────────────────────────────────────
+# ── main loop ───────────────────────────────────────────────────────────
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
     df = statcast_pitcher(START, END, pid)
 
-    # regular-season only
+    # regular season only
     df = df[df.game_type == "R"]
-    print("downloaded rows:", len(df))
+
+    # starter filter: pitcher must face 1st batter of game (inning 1 & at_bat_number 1)
+    starter_games = df.loc[(df.inning == 1) & (df.at_bat_number == 1), "game_pk"].unique()
+    df = df[df.game_pk.isin(starter_games)]
+
+    print("rows after starter filter:", len(df))
     if df.empty:
         continue
 
     df = add_pa_order(df)
     df["bucket"] = df.apply(bucket, axis=1)
     df = df.dropna(subset=["bucket"])
-    print("kept after filter:", len(df))
+    print("kept after bucket filter:", len(df))
     if df.empty:
         continue
 
@@ -96,10 +90,10 @@ for name, pid in PITCHERS.items():
           .sort_values(["game_date", "game_pk"])
     )
 
-    # detailed file
+    # detailed CSV
     df_out.to_csv(f"{name}_first_pitch.csv", index=False)
 
-    # summary file (count + %)
+    # summary CSV (count + pct)
     summary = (
         df_out.groupby(["bucket", "pitch_name"])
               .size()
