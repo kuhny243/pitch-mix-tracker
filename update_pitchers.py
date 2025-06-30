@@ -26,7 +26,7 @@ def bucket(row):
     return None
 
 for name, pid in PITCHERS.items():
-    df = statcast_pitcher(START, END, pid, verbose=False)
+    df = statcast_pitcher(START, END, pid)
     df["bucket"] = df.apply(bucket, axis=1)
     df = df.dropna(subset=["bucket"])
     df[["game_pk","game_date","bucket","pitch_name"]].to_csv(
