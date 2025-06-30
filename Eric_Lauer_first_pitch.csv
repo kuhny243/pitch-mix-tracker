@@ -1,0 +1,25 @@
+game_pk,game_date,bucket,pitch_name
+777886,2025-05-17,Inning_3_leadoff,Slider
+777886,2025-05-17,Inning_2_leadoff,Curveball
+777886,2025-05-17,Batter_3,Slider
+777886,2025-05-17,Batter_2,4-Seam Fastball
+777810,2025-05-23,Inning_3_leadoff,4-Seam Fastball
+777810,2025-05-23,Inning_2_leadoff,4-Seam Fastball
+777810,2025-05-23,Batter_3,4-Seam Fastball
+777810,2025-05-23,Batter_2,Curveball
+777545,2025-06-11,Inning_3_leadoff,4-Seam Fastball
+777545,2025-06-11,Inning_2_leadoff,4-Seam Fastball
+777545,2025-06-11,Batter_3,Cutter
+777545,2025-06-11,Batter_2,4-Seam Fastball
+777462,2025-06-18,Inning_3_leadoff,4-Seam Fastball
+777462,2025-06-18,Inning_2_leadoff,4-Seam Fastball
+777462,2025-06-18,Batter_3,Curveball
+777462,2025-06-18,Batter_2,Cutter
+777384,2025-06-24,Inning_3_leadoff,4-Seam Fastball
+777384,2025-06-24,Inning_2_leadoff,Curveball
+777384,2025-06-24,Batter_3,Curveball
+777384,2025-06-24,Batter_2,4-Seam Fastball
+777310,2025-06-29,Inning_3_leadoff,Cutter
+777310,2025-06-29,Inning_2_leadoff,4-Seam Fastball
+777310,2025-06-29,Batter_3,4-Seam Fastball
+777310,2025-06-29,Batter_2,4-Seam Fastball
