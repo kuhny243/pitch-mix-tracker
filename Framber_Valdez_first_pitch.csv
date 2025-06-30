@@ -1,5 +1,4 @@
 game_pk,game_date,bucket,pitch_name
-778559,2025-03-27,Leadoff_2nd_PA,Changeup
 778559,2025-03-27,Inning_3_leadoff,Changeup
 778559,2025-03-27,Inning_2_leadoff,Sinker
 778559,2025-03-27,Batter_3,Curveball
@@ -20,6 +19,7 @@ game_pk,game_date,bucket,pitch_name
 778237,2025-04-20,Inning_2_leadoff,Sinker
 778237,2025-04-20,Batter_3,Curveball
 778237,2025-04-20,Batter_2,Sinker
+778237,2025-04-20,Leadoff_2nd_PA,Sinker
 778167,2025-04-26,Inning_3_leadoff,Curveball
 778167,2025-04-26,Inning_2_leadoff,Changeup
 778167,2025-04-26,Batter_3,Curveball
@@ -35,6 +35,7 @@ game_pk,game_date,bucket,pitch_name
 777931,2025-05-13,Inning_2_leadoff,Sinker
 777931,2025-05-13,Batter_3,Sinker
 777931,2025-05-13,Batter_2,Sinker
+777931,2025-05-13,Leadoff_2nd_PA,Sinker
 777869,2025-05-18,Inning_3_leadoff,Curveball
 777869,2025-05-18,Inning_2_leadoff,Curveball
 777869,2025-05-18,Batter_3,Curveball
@@ -54,6 +55,7 @@ game_pk,game_date,bucket,pitch_name
 777546,2025-06-12,Inning_2_leadoff,Sinker
 777546,2025-06-12,Batter_3,Sinker
 777546,2025-06-12,Batter_2,Sinker
+777546,2025-06-12,Leadoff_2nd_PA,Sinker
 777456,2025-06-18,Inning_3_leadoff,Changeup
 777456,2025-06-18,Inning_2_leadoff,Sinker
 777456,2025-06-18,Batter_3,Curveball
@@ -66,3 +68,4 @@ game_pk,game_date,bucket,pitch_name
 777308,2025-06-29,Inning_2_leadoff,Sinker
 777308,2025-06-29,Batter_3,Sinker
 777308,2025-06-29,Batter_2,Sinker
+777308,2025-06-29,Leadoff_2nd_PA,Sinker

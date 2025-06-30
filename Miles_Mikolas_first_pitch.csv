@@ -7,16 +7,16 @@ game_pk,game_date,bucket,pitch_name
 778432,2025-04-06,Inning_2_leadoff,4-Seam Fastball
 778432,2025-04-06,Batter_3,4-Seam Fastball
 778432,2025-04-06,Batter_2,4-Seam Fastball
-778347,2025-04-12,Leadoff_2nd_PA,Curveball
 778347,2025-04-12,Inning_3_leadoff,Curveball
 778347,2025-04-12,Inning_2_leadoff,4-Seam Fastball
 778347,2025-04-12,Batter_3,4-Seam Fastball
 778347,2025-04-12,Batter_2,Sinker
-778270,2025-04-18,Leadoff_2nd_PA,Changeup
+778347,2025-04-12,Leadoff_2nd_PA,4-Seam Fastball
 778270,2025-04-18,Inning_3_leadoff,4-Seam Fastball
 778270,2025-04-18,Inning_2_leadoff,Sinker
 778270,2025-04-18,Batter_3,Sinker
 778270,2025-04-18,Batter_2,4-Seam Fastball
+778270,2025-04-18,Leadoff_2nd_PA,4-Seam Fastball
 778214,2025-04-23,Inning_3_leadoff,4-Seam Fastball
 778214,2025-04-23,Inning_2_leadoff,Sinker
 778214,2025-04-23,Batter_3,4-Seam Fastball
@@ -33,7 +33,7 @@ game_pk,game_date,bucket,pitch_name
 777962,2025-05-11,Inning_2_leadoff,4-Seam Fastball
 777962,2025-05-11,Batter_3,4-Seam Fastball
 777962,2025-05-11,Batter_2,4-Seam Fastball
-777885,2025-05-17,Leadoff_2nd_PA,Sinker
+777962,2025-05-11,Leadoff_2nd_PA,Curveball
 777885,2025-05-17,Inning_3_leadoff,Curveball
 777885,2025-05-17,Inning_2_leadoff,4-Seam Fastball
 777885,2025-05-17,Batter_3,Slider
@@ -42,16 +42,15 @@ game_pk,game_date,bucket,pitch_name
 777797,2025-05-23,Inning_2_leadoff,Slider
 777797,2025-05-23,Batter_3,Sinker
 777797,2025-05-23,Batter_2,4-Seam Fastball
-777740,2025-05-28,Leadoff_2nd_PA,4-Seam Fastball
 777740,2025-05-28,Inning_3_leadoff,Curveball
 777740,2025-05-28,Inning_2_leadoff,4-Seam Fastball
 777740,2025-05-28,Batter_3,Sinker
 777740,2025-05-28,Batter_2,Curveball
+777740,2025-05-28,Leadoff_2nd_PA,4-Seam Fastball
 777642,2025-06-05,Inning_3_leadoff,4-Seam Fastball
 777642,2025-06-05,Inning_2_leadoff,4-Seam Fastball
 777642,2025-06-05,Batter_3,Slider
 777642,2025-06-05,Batter_2,4-Seam Fastball
-777558,2025-06-10,Leadoff_2nd_PA,Slider
 777558,2025-06-10,Inning_3_leadoff,Sinker
 777558,2025-06-10,Inning_2_leadoff,4-Seam Fastball
 777558,2025-06-10,Batter_3,Sinker
