@@ -1,5 +1,5 @@
 # update_pitchers.py
-# 118 pitchers • starter-only • FIVE buckets incl. Leadoff_2nd_PA • auto-retry
+# 118 pitchers • starter-only • 5 buckets incl. Leadoff_2nd_PA • auto-retry
 
 from pybaseball import statcast_pitcher
 import pandas as pd, time
@@ -9,7 +9,7 @@ from datetime import date
 START = "2025-03-01"
 END   = date.today().isoformat()
 
-# ── 1. Hard-coded pitcher → MLBAM ID mapping ───────────────────────────
+# ── 1. Pitcher → MLBAM ID mapping (duplicates removed) ─────────────────
 PITCHERS = {
     "Colin_Rea": 607067,
     "Paul_Skenes": 694973,
@@ -41,7 +41,7 @@ PITCHERS = {
     "Matthew_Boyd": 571440,
     "Hunter_Greene": 668881,
     "Griffin_Canning": 656288,
-    "Shane_Smith": 681343,          # update when official ID available
+    "Shane_Smith": 681343,              # TODO: update when official ID assigned
     "Landon_Roupp": 677974,
     "Freddy_Peralta": 642547,
     "Drew_Rasmussen": 656876,
@@ -113,7 +113,7 @@ PITCHERS = {
     "Nick_Martinez": 607212,
     "Taj_Bradley": 671737,
     "Chris_Paddack": 663978,
-    "Luis_Castillo": 622491,
+    "Luis_Castillo": 664057,
     "Tomoyuki_Sugano": 608372,
     "Chase_Dollander": 801403,
     "Tylor_Megill": 656731,
@@ -136,37 +136,43 @@ PITCHERS = {
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
-def add_pa_order(df):
+def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
     df["pa_order"] = (
         df.groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
-          .rank(method="dense")
-          .astype(int)
+          .rank(method="dense").astype(int)
     )
     return df
 
-def add_leadoff_seq(df):
+def add_leadoff_seq(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Adds leadoff_seq:
+    leadoff_seq:
       0 = first PA of lineup spot-1
-      1 = second PA  (target for Leadoff_2nd_PA)
-     −1 = all others
+      1 = second PA (target bucket)
+     -1 = everything else
+    Works even if lineup-order columns are missing.
     """
-    for col in ["batting_order", "bat_order",
-                "batting_order_numeric", "batting_position"]:
-        if col in df.columns:
-            order_col = col
-            break
-    else:
-        df["leadoff_seq"] = -1
-        return df
-
     df["leadoff_seq"] = -1
-    mask = df[order_col] == 1
-    df.loc[mask, "leadoff_seq"] = df.loc[mask].groupby("game_pk").cumcount()
+
+    # Try normal lineup columns first
+    for col in ["batting_order", "bat_order", "batting_order_numeric", "batting_position"]:
+        if col in df.columns:
+            mask = df[col] == 1
+            df.loc[mask, "leadoff_seq"] = df.loc[mask].groupby("game_pk").cumcount()
+            return df
+
+    # Fallback: find the game’s first batter, tag their second PA
+    leadoff_ids = (
+        df.loc[(df.inning == 1) & (df.pa_order == 1)]
+          .groupby("game_pk")["batter"]
+          .first()
+    )
+    for gpk, batter_id in leadoff_ids.items():
+        mask = (df.game_pk == gpk) & (df.batter == batter_id)
+        df.loc[mask, "leadoff_seq"] = df.loc[mask].groupby("game_pk").cumcount()
     return df
 
-def bucket(row):
-    """Return one of the 5 bucket labels or None."""
+def bucket(row) -> str | None:
+    """Return bucket label or None."""
     if not (row.pitch_number == 1 and row.balls == 0 and row.strikes == 0):
         return None
     if row.inning == 1 and row.pa_order in (2, 3):
@@ -181,7 +187,6 @@ def bucket(row):
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
 
-    # download with one retry
     for attempt in (1, 2):
         try:
             df = statcast_pitcher(START, END, pid)
@@ -200,7 +205,6 @@ for name, pid in PITCHERS.items():
     df = add_pa_order(df)
     df = add_leadoff_seq(df)
 
-    # keep only games where pitcher faced first PA of own half-inning
     starter_games = df.loc[(df.inning == 1) & (df.pa_order == 1), "game_pk"].unique()
     df = df[df.game_pk.isin(starter_games)]
     if df.empty:
@@ -230,4 +234,4 @@ for name, pid in PITCHERS.items():
     )
     summary.to_csv(f"{name}_first_pitch_summary.csv", index=False)
 
-print("\n✅ All done")
+print("\n✅ All pitchers processed")
