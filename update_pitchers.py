@@ -1,5 +1,5 @@
 # update_pitchers.py
-# 118 pitchers • starter-only • FIVE buckets (incl. Leadoff_2nd_PA) • auto-retry
+# 118 pitchers • starter-only • FIVE buckets (Leadoff_2nd_PA fixed) • auto-retry
 
 from pybaseball import statcast_pitcher
 import pandas as pd, time
@@ -9,7 +9,7 @@ from datetime import date
 START = "2025-03-01"
 END   = date.today().isoformat()
 
-# ── 1. Pitcher → MLBAM ID mapping ──────────────────────────────────────
+# ── 1. Pitcher → MLBAM ID mapping (duplicates removed) ─────────────────
 PITCHERS = {
     "Colin_Rea": 607067,
     "Paul_Skenes": 694973,
@@ -137,7 +137,7 @@ PITCHERS = {
 
 # ── 2. Helper functions ────────────────────────────────────────────────
 def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
-    """Add pa_order = 1,2,3… within each half-inning."""
+    """Add pa_order within each half-inning (1,2,3…)."""
     df["pa_order"] = (
         df.sort_values("at_bat_number")
           .groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
@@ -146,49 +146,28 @@ def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
     )
     return df
 
+
 def add_leadoff_seq(df: pd.DataFrame) -> pd.DataFrame:
     """
-    leadoff_seq:
-      0 → first time lineup spot-1 bats
-      1 → second time  (bucket: Leadoff_2nd_PA)
-     -1 → all other PAs
-    Works even when lineup-order columns are missing.
+    Tag every PA where pa_order == 1.
+      0 → first leadoff PA of game
+      1 → second leadoff PA (bucket Leadoff_2nd_PA)
+      2 → third, etc.
     """
     df["leadoff_seq"] = -1
-
-    # Preferred: a real lineup-order column
-    for col in ["batting_order", "bat_order",
-                "batting_order_numeric", "batting_position"]:
-        if col in df.columns:
-            mask = df[col] == 1
-            df.loc[mask, "leadoff_seq"] = (
-                df.loc[mask]
-                  .sort_values("at_bat_number")
-                  .groupby("game_pk")["at_bat_number"]
-                  .rank(method="first")
-                  .astype(int) - 1
-            )
-            return df
-
-    # Fallback: detect leadoff batter by first PA of game
-    first_batters = (
-        df.loc[(df.inning == 1) & (df.pa_order == 1)]
-          .groupby("game_pk")["batter"]
-          .first()
+    mask = df["pa_order"] == 1
+    df.loc[mask, "leadoff_seq"] = (
+        df.loc[mask]
+          .sort_values("at_bat_number")
+          .groupby("game_pk")["at_bat_number"]
+          .rank(method="first")
+          .astype(int) - 1
     )
-    for gpk, batter_id in first_batters.items():
-        mask = (df.game_pk == gpk) & (df.batter == batter_id)
-        df.loc[mask, "leadoff_seq"] = (
-            df.loc[mask]
-              .sort_values("at_bat_number")
-              .groupby("game_pk")["at_bat_number"]
-              .rank(method="first")
-              .astype(int) - 1
-        )
     return df
 
+
 def bucket(row) -> str | None:
-    """Return bucket label or None."""
+    """Return one of five bucket labels or None."""
     if not (row.pitch_number == 1 and row.balls == 0 and row.strikes == 0):
         return None
     if row.inning == 1 and row.pa_order in (2, 3):
@@ -199,10 +178,12 @@ def bucket(row) -> str | None:
         return "Leadoff_2nd_PA"
     return None
 
-# ── 3. Main loop with retry ────────────────────────────────────────────
+
+# ── 3. Main loop with single retry ─────────────────────────────────────
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
 
+    # Download with one retry on parse error
     for attempt in (1, 2):
         try:
             df = statcast_pitcher(START, END, pid)
@@ -217,21 +198,25 @@ for name, pid in PITCHERS.items():
     if df.empty:
         continue
 
+    # Regular-season starts only
     df = df[df.game_type == "R"]
     df = add_pa_order(df)
-    df = add_leadoff_seq(df)
 
-    # Starter filter: pitcher faced first PA of own half-inning
+    # Keep games where pitcher faced first PA of own half-inning
     starter_games = df.loc[(df.inning == 1) & (df.pa_order == 1), "game_pk"].unique()
     df = df[df.game_pk.isin(starter_games)]
     if df.empty:
         continue
 
+    df = add_leadoff_seq(df)
+
+    # Bucket logic
     df["bucket"] = df.apply(bucket, axis=1)
     df = df.dropna(subset=["bucket"])
     if df.empty:
         continue
 
+    # Write detailed + summary CSVs
     pitch_col = "pitch_name" if "pitch_name" in df.columns else "pitch_type"
     df_out = (
         df[["game_pk", "game_date", "bucket", pitch_col]]
