@@ -1,4 +1,5 @@
 game_pk,game_date,bucket,pitch_name
+778467,2025-04-03,Leadoff_2nd_PA,Slider
 778467,2025-04-03,Inning_3_leadoff,Sinker
 778467,2025-04-03,Inning_2_leadoff,Cutter
 778467,2025-04-03,Batter_3,Cutter
@@ -15,6 +16,7 @@ game_pk,game_date,bucket,pitch_name
 778252,2025-04-19,Inning_2_leadoff,Split-Finger
 778252,2025-04-19,Batter_3,Sinker
 778252,2025-04-19,Batter_2,4-Seam Fastball
+778252,2025-04-19,Leadoff_2nd_PA,Sinker
 778182,2025-04-25,Inning_3_leadoff,4-Seam Fastball
 778182,2025-04-25,Inning_2_leadoff,Split-Finger
 778182,2025-04-25,Batter_3,4-Seam Fastball

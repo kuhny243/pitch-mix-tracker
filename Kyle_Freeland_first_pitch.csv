@@ -22,6 +22,7 @@ game_pk,game_date,bucket,pitch_name
 778181,2025-04-25,Inning_2_leadoff,4-Seam Fastball
 778181,2025-04-25,Batter_3,Cutter
 778181,2025-04-25,Batter_2,4-Seam Fastball
+778098,2025-05-01,Leadoff_2nd_PA,Knuckle Curve
 778098,2025-05-01,Inning_3_leadoff,4-Seam Fastball
 778098,2025-05-01,Inning_2_leadoff,Sinker
 778098,2025-05-01,Batter_3,4-Seam Fastball
@@ -30,6 +31,7 @@ game_pk,game_date,bucket,pitch_name
 778004,2025-05-08,Inning_2_leadoff,Changeup
 778004,2025-05-08,Batter_3,4-Seam Fastball
 778004,2025-05-08,Batter_2,Sinker
+777934,2025-05-13,Leadoff_2nd_PA,Knuckle Curve
 777934,2025-05-13,Inning_3_leadoff,Knuckle Curve
 777934,2025-05-13,Inning_2_leadoff,Cutter
 777934,2025-05-13,Batter_3,4-Seam Fastball

@@ -1,8 +1,10 @@
 game_pk,game_date,bucket,pitch_name
+778559,2025-03-27,Leadoff_2nd_PA,Sinker
 778559,2025-03-27,Inning_3_leadoff,Slider
 778559,2025-03-27,Inning_2_leadoff,Sinker
 778559,2025-03-27,Batter_3,Sinker
 778559,2025-03-27,Batter_2,Sinker
+778481,2025-04-02,Leadoff_2nd_PA,Sinker
 778481,2025-04-02,Inning_3_leadoff,Cutter
 778481,2025-04-02,Inning_2_leadoff,Cutter
 778481,2025-04-02,Batter_3,Sinker
@@ -19,6 +21,7 @@ game_pk,game_date,bucket,pitch_name
 778244,2025-04-20,Inning_2_leadoff,Sinker
 778244,2025-04-20,Batter_3,Sinker
 778244,2025-04-20,Batter_2,Sinker
+778173,2025-04-26,Leadoff_2nd_PA,Sweeper
 778173,2025-04-26,Inning_3_leadoff,Changeup
 778173,2025-04-26,Inning_2_leadoff,Sweeper
 778173,2025-04-26,Batter_3,Cutter
