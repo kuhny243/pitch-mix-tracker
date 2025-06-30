@@ -34,6 +34,8 @@ def bucket(row) -> str | None:
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
     df = statcast_pitcher(START, END, pid)
+   # keep only regular-season games (game_type == "R")
+    df = df[df.game_type == "R"]
     print("downloaded rows:", len(df))
     if df.empty:
         continue
