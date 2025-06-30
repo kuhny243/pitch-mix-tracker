@@ -1,4 +1,4 @@
-# update_pitchers.py  – four buckets + summary (fixed)
+# update_pitchers.py  – four buckets + summary (fixed + regular season only)
 from pybaseball import statcast_pitcher
 import pandas as pd
 from datetime import date
@@ -8,7 +8,7 @@ END   = date.today().isoformat()
 
 PITCHERS = {
     "Zack_Wheeler": 554430,
-    # "Aaron_Nola": 596966,
+    # Add more pitchers here if needed
 }
 
 def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
@@ -30,12 +30,13 @@ def bucket(row) -> str | None:
         return f"Inning_{int(row.inning)}_leadoff"
     return None
 
-
 for name, pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
     df = statcast_pitcher(START, END, pid)
-   # keep only regular-season games (game_type == "R")
+
+    # keep only regular-season games (game_type == "R")
     df = df[df.game_type == "R"]
+
     print("downloaded rows:", len(df))
     if df.empty:
         continue
