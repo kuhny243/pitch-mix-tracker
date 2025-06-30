@@ -17,4 +17,6 @@ Inning_3_leadoff,4-Seam Fastball,8,47.1
 Inning_3_leadoff,Sinker,1,5.9
 Inning_3_leadoff,Slider,1,5.9
 Inning_3_leadoff,Sweeper,7,41.2
-Leadoff_2nd_PA,4-Seam Fastball,4,100.0
+Leadoff_2nd_PA,Changeup,2,13.3
+Leadoff_2nd_PA,Slider,5,33.3
+Leadoff_2nd_PA,Sweeper,8,53.3

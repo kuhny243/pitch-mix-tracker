@@ -1,13 +1,15 @@
 game_pk,game_date,bucket,pitch_name
+778556,2025-03-27,Leadoff_2nd_PA,4-Seam Fastball
 778556,2025-03-27,Inning_3_leadoff,Sinker
 778556,2025-03-27,Inning_2_leadoff,Cutter
 778556,2025-03-27,Batter_3,Cutter
 778556,2025-03-27,Batter_2,Sinker
+778483,2025-04-02,Leadoff_2nd_PA,Cutter
 778483,2025-04-02,Inning_3_leadoff,Cutter
 778483,2025-04-02,Inning_2_leadoff,Curveball
 778483,2025-04-02,Batter_3,Sinker
 778483,2025-04-02,Batter_2,4-Seam Fastball
-778483,2025-04-02,Leadoff_2nd_PA,4-Seam Fastball
+778413,2025-04-07,Leadoff_2nd_PA,Cutter
 778413,2025-04-07,Inning_3_leadoff,Cutter
 778413,2025-04-07,Inning_2_leadoff,Curveball
 778413,2025-04-07,Batter_3,Curveball
@@ -16,8 +18,8 @@ game_pk,game_date,bucket,pitch_name
 777961,2025-05-11,Inning_2_leadoff,4-Seam Fastball
 777961,2025-05-11,Batter_3,Sinker
 777961,2025-05-11,Batter_2,Cutter
-777961,2025-05-11,Leadoff_2nd_PA,Sinker
 777873,2025-05-18,Inning_3_leadoff,Sinker
+777873,2025-05-18,Leadoff_2nd_PA,Curveball
 777873,2025-05-18,Inning_2_leadoff,Cutter
 777873,2025-05-18,Batter_3,4-Seam Fastball
 777873,2025-05-18,Batter_2,Sweeper
@@ -25,7 +27,7 @@ game_pk,game_date,bucket,pitch_name
 777809,2025-05-24,Inning_2_leadoff,Cutter
 777809,2025-05-24,Batter_3,Cutter
 777809,2025-05-24,Batter_2,4-Seam Fastball
-777809,2025-05-24,Leadoff_2nd_PA,Cutter
+777720,2025-05-30,Leadoff_2nd_PA,Sinker
 777720,2025-05-30,Inning_3_leadoff,Sinker
 777720,2025-05-30,Inning_2_leadoff,Sinker
 777720,2025-05-30,Batter_3,Cutter
@@ -34,16 +36,18 @@ game_pk,game_date,bucket,pitch_name
 777628,2025-06-05,Inning_2_leadoff,Sinker
 777628,2025-06-05,Batter_3,Sinker
 777628,2025-06-05,Batter_2,Curveball
+777562,2025-06-11,Leadoff_2nd_PA,Changeup
 777562,2025-06-11,Inning_3_leadoff,Cutter
 777562,2025-06-11,Inning_2_leadoff,Curveball
 777562,2025-06-11,Batter_3,Cutter
 777562,2025-06-11,Batter_2,Cutter
 777484,2025-06-16,Inning_3_leadoff,Sweeper
+777484,2025-06-16,Leadoff_2nd_PA,Cutter
 777484,2025-06-16,Inning_2_leadoff,Sinker
 777484,2025-06-16,Batter_3,Sinker
 777484,2025-06-16,Batter_2,Cutter
-777484,2025-06-16,Leadoff_2nd_PA,Cutter
 777422,2025-06-21,Inning_3_leadoff,Cutter
+777422,2025-06-21,Leadoff_2nd_PA,Changeup
 777422,2025-06-21,Inning_2_leadoff,Sweeper
 777422,2025-06-21,Batter_3,Sweeper
 777422,2025-06-21,Batter_2,Cutter
