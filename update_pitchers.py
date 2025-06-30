@@ -1,4 +1,4 @@
-# update_pitchers.py  – starter-only (must face 1st batter), four buckets + summary
+# update_pitchers.py  – starter = faced first PA of his half-inning
 from pybaseball import statcast_pitcher, playerid_lookup
 import pandas as pd
 from datetime import date
@@ -29,21 +29,21 @@ Brandon Pfaadt
 Kevin Gausman
 """.strip().splitlines()
 
-clean_names = {n.strip() for n in NAME_LIST if n.strip() and n.strip() != "Zack Wheeler"}
+clean_names = {n.strip() for n in NAME_LIST if n.strip() != "Zack Wheeler"}
 
 def resolve_ids(names):
     mapping = {}
     for full in sorted(names):
         last, first = full.split()[-1], full.split()[0]
-        lookup = playerid_lookup(last, first)
-        if not lookup.empty:
-            mapping[full.replace(" ", "_")] = int(lookup.key_mlbam.iloc[0])
+        lk = playerid_lookup(last, first)
+        if not lk.empty:
+            mapping[full.replace(" ", "_")] = int(lk.key_mlbam.iloc[0])
     return mapping
 
 PITCHERS = resolve_ids(clean_names)
 print(f"Tracking {len(PITCHERS)} pitchers")
 
-# ── helpers ────────────────────────────────────────────────────────────
+# ── helpers ─────────────────────────────────────────────────────────────
 def add_pa_order(df):
     df["pa_order"] = (
         df.groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
@@ -68,15 +68,18 @@ for name, pid in PITCHERS.items():
     # regular season only
     df = df[df.game_type == "R"]
 
-    # starter filter: pitcher must face 1st batter of game (inning 1 & at_bat_number 1)
-    starter_games = df.loc[(df.inning == 1) & (df.at_bat_number == 1), "game_pk"].unique()
+    # add plate-appearance order BEFORE start filter
+    df = add_pa_order(df)
+
+    # starter = pitched inning 1 AND pa_order 1 (first PA of his half)
+    starter_games = df.loc[(df.inning == 1) & (df.pa_order == 1), "game_pk"].unique()
     df = df[df.game_pk.isin(starter_games)]
 
     print("rows after starter filter:", len(df))
     if df.empty:
         continue
 
-    df = add_pa_order(df)
+    # apply bucket logic
     df["bucket"] = df.apply(bucket, axis=1)
     df = df.dropna(subset=["bucket"])
     print("kept after bucket filter:", len(df))
