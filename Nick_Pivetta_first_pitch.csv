@@ -3,16 +3,15 @@ game_pk,game_date,bucket,pitch_name
 778514,2025-03-30,Inning_2_leadoff,Sweeper
 778514,2025-03-30,Batter_3,Curveball
 778514,2025-03-30,Batter_2,4-Seam Fastball
-778514,2025-03-30,Leadoff_2nd_PA,4-Seam Fastball
 778450,2025-04-05,Inning_3_leadoff,4-Seam Fastball
 778450,2025-04-05,Inning_2_leadoff,4-Seam Fastball
 778450,2025-04-05,Batter_3,4-Seam Fastball
 778450,2025-04-05,Batter_2,4-Seam Fastball
+778450,2025-04-05,Leadoff_2nd_PA,4-Seam Fastball
 778361,2025-04-11,Inning_3_leadoff,Sweeper
 778361,2025-04-11,Inning_2_leadoff,4-Seam Fastball
 778361,2025-04-11,Batter_3,Sweeper
 778361,2025-04-11,Batter_2,Curveball
-778361,2025-04-11,Leadoff_2nd_PA,4-Seam Fastball
 778288,2025-04-16,Inning_3_leadoff,Cutter
 778288,2025-04-16,Inning_2_leadoff,Cutter
 778288,2025-04-16,Batter_3,4-Seam Fastball
@@ -21,6 +20,7 @@ game_pk,game_date,bucket,pitch_name
 778221,2025-04-22,Inning_2_leadoff,4-Seam Fastball
 778221,2025-04-22,Batter_3,Curveball
 778221,2025-04-22,Batter_2,4-Seam Fastball
+778221,2025-04-22,Leadoff_2nd_PA,4-Seam Fastball
 778126,2025-04-29,Inning_3_leadoff,4-Seam Fastball
 778126,2025-04-29,Inning_2_leadoff,4-Seam Fastball
 778126,2025-04-29,Batter_3,4-Seam Fastball
@@ -37,6 +37,7 @@ game_pk,game_date,bucket,pitch_name
 777875,2025-05-17,Inning_2_leadoff,4-Seam Fastball
 777875,2025-05-17,Batter_3,4-Seam Fastball
 777875,2025-05-17,Batter_2,4-Seam Fastball
+777875,2025-05-17,Leadoff_2nd_PA,4-Seam Fastball
 777813,2025-05-23,Inning_3_leadoff,4-Seam Fastball
 777813,2025-05-23,Inning_2_leadoff,Curveball
 777813,2025-05-23,Batter_3,Curveball
@@ -66,3 +67,4 @@ game_pk,game_date,bucket,pitch_name
 777360,2025-06-25,Inning_2_leadoff,4-Seam Fastball
 777360,2025-06-25,Batter_3,4-Seam Fastball
 777360,2025-06-25,Batter_2,4-Seam Fastball
+777360,2025-06-25,Leadoff_2nd_PA,4-Seam Fastball
