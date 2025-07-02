@@ -67,3 +67,7 @@ game_pk,game_date,bucket,pitch_name
 777361,2025-06-25,Inning_2_leadoff,Sweeper
 777361,2025-06-25,Batter_3,Curveball
 777361,2025-06-25,Batter_2,4-Seam Fastball
+777288,2025-07-01,Inning_3_leadoff,Curveball
+777288,2025-07-01,Inning_2_leadoff,Curveball
+777288,2025-07-01,Batter_3,Changeup
+777288,2025-07-01,Batter_2,4-Seam Fastball
