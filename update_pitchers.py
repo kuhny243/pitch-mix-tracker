@@ -1,6 +1,5 @@
 # update_pitchers.py
-# 118 pitchers • starter-only • FIVE buckets • slot-based 2nd leadoff
-# strict 0-0 for the four original buckets; any count for Leadoff_2nd_PA
+# 118 pitchers • FIVE buckets • full pitch names
 
 from pybaseball import statcast_pitcher
 import pandas as pd, time
@@ -9,20 +8,39 @@ from datetime import date
 
 START, END = "2025-03-01", date.today().isoformat()
 
-# ── 1. 118 Pitchers → MLBAM IDs (unchanged) ────────────────────────────
+# ── full-name lookup for pitch_type codes ──────────────────────────────
+CODE_TO_NAME = {
+    "FF": "4-Seam Fastball",
+    "FT": "2-Seam Fastball",
+    "SI": "Sinker",
+    "FC": "Cutter",
+    "FS": "Splitter",
+    "SL": "Slider",
+    "SW": "Sweeper",
+    "KC": "Knuckle Curve",
+    "CU": "Curveball",
+    "CH": "Changeup",
+    "EP": "Eephus",
+    "KN": "Knuckleball",
+    "SC": "Screwball",
+    # add rare codes if they appear
+}
+
+# ── 1. Pitcher → MLBAM IDs (118 total) ─────────────────────────────────
 PITCHERS = {
     "Colin_Rea": 607067, "Paul_Skenes": 694973, "Seth_Lugo": 607625,
     "Simeon_Woods_Richardson": 677943, "Ben_Lively": 594902,
     "Zack_Wheeler": 554430, "David_Peterson": 656849,
-    "Tyler_Anderson": 542881, "Brayan_Bello": 686880, "Andrew_Abbott": 671096,
-    "Sonny_Gray": 543243, "Jose_Berrios": 621244, "Mitch_Keller": 656605,
-    "Ben_Brown": 676962, "Kyle_Freeland": 607536, "Framber_Valdez": 664285,
-    "Jose_Soriano": 660670, "Bryan_Woo": 693433, "Brandon_Pfaadt": 694297,
-    "Kevin_Gausman": 592332, "Tanner_Bibee": 676440, "Brady_Singer": 663903,
-    "Carlos_Rodon": 592682, "Bowden_Francis": 670102, "German_Marquez": 606466,
-    "Luis_Severino": 622663, "Trevor_Williams": 592866, "Matthew_Boyd": 571440,
-    "Hunter_Greene": 668881, "Griffin_Canning": 656288, "Shane_Smith": 681343,
-    "Landon_Roupp": 677974, "Freddy_Peralta": 642547, "Drew_Rasmussen": 656876,
+    "Tyler_Anderson": 542881, "Brayan_Bello": 686880,
+    "Andrew_Abbott": 671096, "Sonny_Gray": 543243, "Jose_Berrios": 621244,
+    "Mitch_Keller": 656605, "Ben_Brown": 676962, "Kyle_Freeland": 607536,
+    "Framber_Valdez": 664285, "Jose_Soriano": 660670, "Bryan_Woo": 693433,
+    "Brandon_Pfaadt": 694297, "Kevin_Gausman": 592332, "Tanner_Bibee": 676440,
+    "Brady_Singer": 663903, "Carlos_Rodon": 592682, "Bowden_Francis": 670102,
+    "German_Marquez": 606466, "Luis_Severino": 622663,
+    "Trevor_Williams": 592866, "Matthew_Boyd": 571440, "Hunter_Greene": 668881,
+    "Griffin_Canning": 656288, "Shane_Smith": 681343, "Landon_Roupp": 677974,
+    "Freddy_Peralta": 642547, "Drew_Rasmussen": 656876,
     "Pablo_Lopez": 642456, "Zac_Gallen": 668678, "Cade_Povich": 700249,
     "Miles_Mikolas": 571945, "AJ_Smith_Shawver": 700363, "Tyler_Mahle": 641816,
     "Cristopher_Sanchez": 665742, "Chris_Sale": 519242, "Shane_Baz": 669358,
@@ -35,14 +53,14 @@ PITCHERS = {
     "Max_Fried": 608331, "Nick_Lodolo": 666157, "Dean_Kremer": 665152,
     "Jesus_Luzardo": 666200, "Patrick_Corbin": 571578, "Kyle_Hendricks": 543294,
     "Spencer_Schwellenbach": 680885, "Walker_Buehler": 621111,
-    "Kodai_Senga": 673540, "Antonio_Senzatela": 622608, "Edward_Cabrera": 665795,
-    "Robbie_Ray": 592662, "Michael_Wacha": 608379, "Tarik_Skubal": 669373,
-    "Zack_Littell": 641793, "Bryce_Miller": 682243, "Landon_Knack": 689017,
-    "Will_Warren": 701542, "Dylan_Cease": 656302, "Bailey_Falter": 663559,
-    "Bailey_Ober": 641927, "Jacob_DeGrom": 594798, "Bryce_Elder": 693821,
-    "Garrett_Crochet": 676979, "JP_Sears": 676664, "Gavin_Williams": 668909,
-    "Jack_Kochanowicz": 686799, "Clay_Holmes": 605280, "Kris_Bubic": 663460,
-    "Hunter_Brown": 686613, "Jameson_Taillon": 592791,
+    "Kodai_Senga": 673540, "Antonio_Senzatela": 622608,
+    "Edward_Cabrera": 665795, "Robbie_Ray": 592662, "Michael_Wacha": 608379,
+    "Tarik_Skubal": 669373, "Zack_Littell": 641793, "Bryce_Miller": 682243,
+    "Landon_Knack": 689017, "Will_Warren": 701542, "Dylan_Cease": 656302,
+    "Bailey_Falter": 663559, "Bailey_Ober": 641927, "Jacob_DeGrom": 594798,
+    "Bryce_Elder": 693821, "Garrett_Crochet": 676979, "JP_Sears": 676664,
+    "Gavin_Williams": 668909, "Jack_Kochanowicz": 686799, "Clay_Holmes": 605280,
+    "Kris_Bubic": 663460, "Hunter_Brown": 686613, "Jameson_Taillon": 592791,
     "Yoshinobu_Yamamoto": 808967, "Max_Meyer": 676974, "Logan_Webb": 657277,
     "Joe_Ryan": 657746, "Dustin_May": 669160, "Mitchell_Parker": 680730,
     "Charlie_Morton": 119424, "Nick_Martinez": 607212, "Taj_Bradley": 671737,
@@ -68,13 +86,12 @@ def add_pa_order(df):
 def mark_first_pitch(df):
     pc = "pitch_name" if "pitch_name" in df.columns else "pitch_type"
     df["first_pitch"] = False
-    first_idx = (df[df[pc].notna()]
-                 .sort_values(["game_pk","at_bat_number","pitch_number"])
-                 .groupby(["game_pk","at_bat_number"]).head(1).index)
-    df.loc[first_idx,"first_pitch"] = True; return df
+    idx = (df[df[pc].notna()]
+           .sort_values(["game_pk","at_bat_number","pitch_number"])
+           .groupby(["game_pk","at_bat_number"]).head(1).index)
+    df.loc[idx,"first_pitch"] = True; return df
 
 def tag_slot_seq(df):
-    """Label 0-0 first-pitch rows where pa_order == 1"""
     df["slot_seq"] = -1
     mask = (df.first_pitch & (df.pa_order==1) &
             (df.balls==0) & (df.strikes==0))
@@ -84,15 +101,20 @@ def tag_slot_seq(df):
     ); return df
 
 def bucket(row):
-    # Leadoff 2nd PA (slot_seq==1) comes **after** strict buckets
-    if row.first_pitch and row.balls == 0 and row.strikes == 0:
+    if row.first_pitch and row.balls==0 and row.strikes==0:
         if row.inning==1 and row.pa_order==2: return "Batter_2"
         if row.inning==1 and row.pa_order==3: return "Batter_3"
         if row.inning==2 and row.pa_order==1: return "Inning_2_leadoff"
         if row.inning==3 and row.pa_order==1: return "Inning_3_leadoff"
-    if row.slot_seq == 1:
+    if row.slot_seq==1:
         return "Leadoff_2nd_PA"
     return None
+
+def full_pitch_name(row):
+    """Return existing pitch_name if present, else map pitch_type code."""
+    if pd.notna(row.pitch_name) and row.pitch_name.strip():
+        return row.pitch_name.strip()
+    return CODE_TO_NAME.get(row.pitch_type, row.pitch_type)
 
 # ── 3. Main loop ───────────────────────────────────────────────────────
 for name,pid in PITCHERS.items():
@@ -116,10 +138,12 @@ for name,pid in PITCHERS.items():
     df = df.dropna(subset=["bucket"])
     if df.empty: continue
 
-    # group by stable pitch_type codes
+    # derive full readable name
+    df["pitch_name_full"] = df.apply(full_pitch_name, axis=1)
+
     detail = (
-        df[["game_pk","game_date","bucket","pitch_type"]]
-          .rename(columns={"pitch_type":"pitch_name"})
+        df[["game_pk","game_date","bucket","pitch_name_full"]]
+          .rename(columns={"pitch_name_full":"pitch_name"})
           .sort_values(["game_date","game_pk"])
     )
     detail.to_csv(f"{name}_first_pitch.csv",index=False)
@@ -133,4 +157,4 @@ for name,pid in PITCHERS.items():
     )
     summary.to_csv(f"{name}_first_pitch_summary.csv",index=False)
 
-print("\n✅ All pitchers processed")
+print("\n✅ All pitchers processed — full names restored")
