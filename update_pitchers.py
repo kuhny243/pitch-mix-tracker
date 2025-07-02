@@ -1,5 +1,5 @@
 # update_pitchers.py
-# 118 pitchers • FIVE buckets (0-0 count) • diagnostic for Colin_Rea
+# 118 pitchers • starter-only • FIVE buckets (0-0 count) • slot-based 2nd leadoff
 
 from pybaseball import statcast_pitcher
 import pandas as pd, time
@@ -7,9 +7,8 @@ from pandas.errors import ParserError, EmptyDataError
 from datetime import date
 
 START, END = "2025-03-01", date.today().isoformat()
-TARGET_PITCHER = "Colin_Rea"        # ← change if you want a different pitcher
 
-# ── 1. Pitcher → MLBAM ID mapping (118 total) ──────────────────────────
+# ── 1. 118 Pitchers → MLBAM IDs ────────────────────────────────────────
 PITCHERS = {
     "Colin_Rea": 607067, "Paul_Skenes": 694973, "Seth_Lugo": 607625,
     "Simeon_Woods_Richardson": 677943, "Ben_Lively": 594902,
@@ -60,101 +59,75 @@ PITCHERS = {
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
-def add_pa_order(df: pd.DataFrame) -> pd.DataFrame:
+def add_pa_order(df):
     df["pa_order"] = (
         df.sort_values("at_bat_number")
           .groupby(["game_pk", "inning", "inning_topbot"])["at_bat_number"]
           .rank(method="dense").astype(int)
-    )
-    return df
+    ); return df
 
-def mark_first_pitch(df: pd.DataFrame) -> pd.DataFrame:
+def mark_first_pitch(df):
     pc = "pitch_name" if "pitch_name" in df.columns else "pitch_type"
     df["first_pitch"] = False
     idx = (df[df[pc].notna()]
-           .sort_values(["game_pk", "at_bat_number", "pitch_number"])
-           .groupby(["game_pk", "at_bat_number"]).head(1).index)
-    df.loc[idx, "first_pitch"] = True
-    return df
+           .sort_values(["game_pk","at_bat_number","pitch_number"])
+           .groupby(["game_pk","at_bat_number"]).head(1).index)
+    df.loc[idx,"first_pitch"] = True; return df
 
-def tag_leadoff_seq(df: pd.DataFrame) -> pd.DataFrame:
-    """Number 0-0 first-pitches by the *same batter* who led off the game."""
-    df["leadoff_seq"] = -1
-    lead_bat = (
-        df[(df.inning == 1) & (df.pa_order == 1)]
-          .groupby("game_pk")["batter"].first().to_dict()
-    )
-    for gpk, bid in lead_bat.items():
-        mask = ((df.game_pk == gpk) & (df.batter == bid) &
-                df.first_pitch & (df.balls == 0) & (df.strikes == 0))
-        df.loc[mask, "leadoff_seq"] = (
-            df.loc[mask]
-              .sort_values("at_bat_number")
-              .groupby("game_pk").cumcount()
-        )
-    return df
+def tag_slot_seq(df):
+    """Label 0-0 first-pitch PAs where pa_order==1 (leadoff slot)"""
+    df["slot_seq"] = -1
+    mask = (df.first_pitch & (df.pa_order == 1) &
+            (df.balls == 0) & (df.strikes == 0))
+    df.loc[mask,"slot_seq"] = (
+        df.loc[mask].sort_values("at_bat_number")
+          .groupby("game_pk").cumcount()
+    ); return df
 
-def bucket(row) -> str | None:
+def bucket(row):
+    if row.slot_seq == 1:
+        return "Leadoff_2nd_PA"
     if not (row.first_pitch and row.balls == 0 and row.strikes == 0):
         return None
-    if row.inning == 1 and row.pa_order == 2:
-        return "Batter_2"
-    if row.inning == 1 and row.pa_order == 3:
-        return "Batter_3"
-    if row.inning == 2 and row.pa_order == 1:
-        return "Inning_2_leadoff"
-    if row.inning == 3 and row.pa_order == 1:
-        return "Inning_3_leadoff"
-    if row.leadoff_seq == 1:
-        return "Leadoff_2nd_PA"
+    if row.inning == 1 and row.pa_order == 2: return "Batter_2"
+    if row.inning == 1 and row.pa_order == 3: return "Batter_3"
+    if row.inning == 2 and row.pa_order == 1: return "Inning_2_leadoff"
+    if row.inning == 3 and row.pa_order == 1: return "Inning_3_leadoff"
     return None
 
-# ── 3. Main loop with diagnostic printout ──────────────────────────────
-for name, pid in PITCHERS.items():
+# ── 3. Main loop ───────────────────────────────────────────────────────
+for name,pid in PITCHERS.items():
     print(f"\n=== {name} ({pid}) ===")
-    for attempt in (1, 2):
+    for attempt in (1,2):
         try:
-            df = statcast_pitcher(START, END, pid); break
-        except (ParserError, EmptyDataError):
+            df = statcast_pitcher(START,END,pid); break
+        except (ParserError,EmptyDataError):
             time.sleep(2); df = pd.DataFrame()
     if df.empty: continue
 
-    df = df[df.game_type == "R"]
+    df = df[df.game_type=="R"]
     df = add_pa_order(df); df = mark_first_pitch(df)
 
-    started_games = df.loc[(df.inning == 1) & (df.pa_order == 1),
-                            "game_pk"].unique()
-    df = df[df.game_pk.isin(started_games)]
+    starts = df.loc[(df.inning==1)&(df.pa_order==1),"game_pk"].unique()
+    df = df[df.game_pk.isin(starts)]
     if df.empty: continue
 
-    df = tag_leadoff_seq(df)
-    df["bucket"] = df.apply(bucket, axis=1)
+    df = tag_slot_seq(df)
+    df["bucket"] = df.apply(bucket,axis=1)
     df = df.dropna(subset=["bucket"])
-
-    # ── Diagnostic block for the target pitcher ───────────────────────
-    if name == TARGET_PITCHER:
-        counted = set(df.loc[df.bucket == "Leadoff_2nd_PA", "game_pk"])
-        missed  = sorted(set(started_games) - counted)
-        print(f"\nDIAGNOSTIC ▶ {name}: {len(started_games)} starts | "
-              f"{len(counted)} Leadoff_2nd_PA rows")
-        for gpk in missed:
-            gdate = df.loc[df.game_pk == gpk, "game_date"].iloc[0]
-            print(f"  ❌  missing Leadoff_2nd_PA → game_pk {gpk} ({gdate})")
-    # ------------------------------------------------------------------
-
-    if df.empty: continue   # keep file generation for other pitchers
+    if df.empty: continue
 
     pc = "pitch_name" if "pitch_name" in df.columns else "pitch_type"
-    detail = (df[["game_pk", "game_date", "bucket", pc]]
-              .rename(columns={pc: "pitch_name"})
-              .sort_values(["game_date", "game_pk"]))
-    detail.to_csv(f"{name}_first_pitch.csv", index=False)
+    detail = (df[["game_pk","game_date","bucket",pc]]
+              .rename(columns={pc:"pitch_name"})
+              .sort_values(["game_date","game_pk"]))
+    detail.to_csv(f"{name}_first_pitch.csv",index=False)
 
-    summary = (detail.groupby(["bucket", "pitch_name"])
+    summary = (detail.groupby(["bucket","pitch_name"])
                .size().reset_index(name="count"))
     summary["pct"] = summary.groupby("bucket")["count"].transform(
-        lambda x: (x / x.sum() * 100).round(1)
+        lambda x:(x/x.sum()*100).round(1)
     )
-    summary.to_csv(f"{name}_first_pitch_summary.csv", index=False)
+    summary.to_csv(f"{name}_first_pitch_summary.csv",index=False)
 
-print("\n✅ Diagnostic run finished")
+print("\n✅ All pitchers processed")
