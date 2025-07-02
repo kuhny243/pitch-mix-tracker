@@ -72,7 +72,7 @@ PITCHERS = {
     "Ranger_Suarez": 664561, "Logan_Allen": 671106, "Emmet_Sheehan": 686218,
     "Stephen_Kolek": 663568, "Eduardo_Rodriguez": 571561, "Eric_Lauer": 641778,
     "Spencer_Strider": 675911, "Andrew_Heaney": 571760,
-    "Justin_Verlander": 434378, "Shota_Imanaga": 684007,
+    "Justin_Verlander": 434378, "Shota_Imanaga": 684007, "Nathan_Eovaldi": 543135
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
