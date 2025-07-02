@@ -39,7 +39,7 @@ PITCHERS = {
     "Brady_Singer": 663903, "Carlos_Rodon": 592682, "Bowden_Francis": 670102,
     "German_Marquez": 606466, "Luis_Severino": 622663,
     "Trevor_Williams": 592866, "Matthew_Boyd": 571440, "Hunter_Greene": 668881,
-    "Griffin_Canning": 656288, "Shane_Smith": 681343, "Landon_Roupp": 677974,
+    "Griffin_Canning": 656288, "Shane_Smith": 681343, "Landen_Roupp": 694738,
     "Freddy_Peralta": 642547, "Drew_Rasmussen": 656876,
     "Pablo_Lopez": 642456, "Zac_Gallen": 668678, "Cade_Povich": 700249,
     "Miles_Mikolas": 571945, "AJ_Smith_Shawver": 700363, "Tyler_Mahle": 641816,
