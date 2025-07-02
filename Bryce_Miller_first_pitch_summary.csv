@@ -7,16 +7,11 @@ Batter_2,Split-Finger,1,10.0
 Batter_3,4-Seam Fastball,8,80.0
 Batter_3,Knuckle Curve,1,10.0
 Batter_3,Sinker,1,10.0
-Inning_2_leadoff,4-Seam Fastball,5,50.0
-Inning_2_leadoff,Cutter,1,10.0
-Inning_2_leadoff,Sinker,1,10.0
-Inning_2_leadoff,Slider,1,10.0
-Inning_2_leadoff,Sweeper,2,20.0
 Inning_3_leadoff,4-Seam Fastball,7,70.0
 Inning_3_leadoff,Sinker,2,20.0
 Inning_3_leadoff,Slider,1,10.0
-Leadoff_2nd_PA,4-Seam Fastball,2,25.0
-Leadoff_2nd_PA,Knuckle Curve,1,12.5
-Leadoff_2nd_PA,Slider,1,12.5
-Leadoff_2nd_PA,Split-Finger,3,37.5
-Leadoff_2nd_PA,Sweeper,1,12.5
+Leadoff_2nd_PA,4-Seam Fastball,5,50.0
+Leadoff_2nd_PA,Cutter,1,10.0
+Leadoff_2nd_PA,Sinker,1,10.0
+Leadoff_2nd_PA,Slider,1,10.0
+Leadoff_2nd_PA,Sweeper,2,20.0

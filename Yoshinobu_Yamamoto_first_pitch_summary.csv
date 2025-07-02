@@ -6,12 +6,9 @@ Batter_2,Split-Finger,1,6.2
 Batter_3,4-Seam Fastball,10,62.5
 Batter_3,Curveball,5,31.2
 Batter_3,Split-Finger,1,6.2
-Inning_2_leadoff,4-Seam Fastball,14,87.5
-Inning_2_leadoff,Curveball,2,12.5
-Inning_3_leadoff,4-Seam Fastball,12,75.0
-Inning_3_leadoff,Curveball,3,18.8
-Inning_3_leadoff,Split-Finger,1,6.2
-Leadoff_2nd_PA,4-Seam Fastball,6,42.9
-Leadoff_2nd_PA,Curveball,3,21.4
-Leadoff_2nd_PA,Cutter,2,14.3
-Leadoff_2nd_PA,Split-Finger,3,21.4
+Inning_2_leadoff,4-Seam Fastball,1,100.0
+Inning_3_leadoff,4-Seam Fastball,12,80.0
+Inning_3_leadoff,Curveball,3,20.0
+Leadoff_2nd_PA,4-Seam Fastball,13,81.2
+Leadoff_2nd_PA,Curveball,2,12.5
+Leadoff_2nd_PA,Split-Finger,1,6.2

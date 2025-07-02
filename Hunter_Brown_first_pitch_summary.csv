@@ -9,16 +9,11 @@ Batter_3,Changeup,1,6.2
 Batter_3,Cutter,2,12.5
 Batter_3,Knuckle Curve,2,12.5
 Batter_3,Sinker,5,31.2
-Inning_2_leadoff,4-Seam Fastball,7,43.8
-Inning_2_leadoff,Knuckle Curve,1,6.2
-Inning_2_leadoff,Sinker,7,43.8
-Inning_2_leadoff,Slider,1,6.2
 Inning_3_leadoff,4-Seam Fastball,4,25.0
 Inning_3_leadoff,Knuckle Curve,5,31.2
 Inning_3_leadoff,Sinker,4,25.0
 Inning_3_leadoff,Slider,3,18.8
-Leadoff_2nd_PA,4-Seam Fastball,3,21.4
-Leadoff_2nd_PA,Changeup,2,14.3
-Leadoff_2nd_PA,Knuckle Curve,3,21.4
-Leadoff_2nd_PA,Sinker,5,35.7
-Leadoff_2nd_PA,Slider,1,7.1
+Leadoff_2nd_PA,4-Seam Fastball,7,43.8
+Leadoff_2nd_PA,Knuckle Curve,1,6.2
+Leadoff_2nd_PA,Sinker,7,43.8
+Leadoff_2nd_PA,Slider,1,6.2

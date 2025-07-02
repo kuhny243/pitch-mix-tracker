@@ -7,12 +7,9 @@ Batter_3,Changeup,1,9.1
 Batter_3,Curveball,1,9.1
 Batter_3,Sinker,4,36.4
 Batter_3,Slurve,1,9.1
-Inning_2_leadoff,Curveball,5,45.5
-Inning_2_leadoff,Sinker,5,45.5
-Inning_2_leadoff,Slurve,1,9.1
 Inning_3_leadoff,Changeup,3,27.3
 Inning_3_leadoff,Curveball,2,18.2
 Inning_3_leadoff,Sinker,6,54.5
-Leadoff_2nd_PA,Changeup,2,25.0
-Leadoff_2nd_PA,Sinker,4,50.0
-Leadoff_2nd_PA,Slurve,2,25.0
+Leadoff_2nd_PA,Curveball,5,45.5
+Leadoff_2nd_PA,Sinker,5,45.5
+Leadoff_2nd_PA,Slurve,1,9.1

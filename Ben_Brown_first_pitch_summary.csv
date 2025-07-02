@@ -3,10 +3,7 @@ Batter_2,4-Seam Fastball,12,85.7
 Batter_2,Knuckle Curve,2,14.3
 Batter_3,4-Seam Fastball,9,64.3
 Batter_3,Knuckle Curve,5,35.7
-Inning_2_leadoff,4-Seam Fastball,11,78.6
-Inning_2_leadoff,Knuckle Curve,3,21.4
 Inning_3_leadoff,4-Seam Fastball,11,78.6
 Inning_3_leadoff,Knuckle Curve,3,21.4
-Leadoff_2nd_PA,4-Seam Fastball,7,58.3
-Leadoff_2nd_PA,Changeup,1,8.3
-Leadoff_2nd_PA,Knuckle Curve,4,33.3
+Leadoff_2nd_PA,4-Seam Fastball,11,78.6
+Leadoff_2nd_PA,Knuckle Curve,3,21.4

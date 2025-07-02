@@ -7,13 +7,10 @@ Batter_3,4-Seam Fastball,2,12.5
 Batter_3,Cutter,5,31.2
 Batter_3,Sinker,5,31.2
 Batter_3,Slider,4,25.0
-Inning_2_leadoff,Cutter,1,6.2
-Inning_2_leadoff,Sinker,12,75.0
-Inning_2_leadoff,Slider,3,18.8
 Inning_3_leadoff,4-Seam Fastball,1,6.2
 Inning_3_leadoff,Cutter,2,12.5
 Inning_3_leadoff,Sinker,7,43.8
 Inning_3_leadoff,Slider,6,37.5
-Leadoff_2nd_PA,Cutter,2,14.3
-Leadoff_2nd_PA,Sinker,5,35.7
-Leadoff_2nd_PA,Slider,7,50.0
+Leadoff_2nd_PA,Cutter,1,6.2
+Leadoff_2nd_PA,Sinker,12,75.0
+Leadoff_2nd_PA,Slider,3,18.8
