@@ -34,7 +34,7 @@ PITCHERS = {
     "Tyler_Anderson": 542881, "Brayan_Bello": 686880,
     "Andrew_Abbott": 671096, "Sonny_Gray": 543243, "Jose_Berrios": 621244,
     "Mitch_Keller": 656605, "Ben_Brown": 676962, "Kyle_Freeland": 607536,
-    "Framber_Valdez": 664285, "Jose_Soriano": 660670, "Bryan_Woo": 693433,
+    "Framber_Valdez": 664285, "Jose_Soriano": 667755, "Bryan_Woo": 693433,
     "Brandon_Pfaadt": 694297, "Kevin_Gausman": 592332, "Tanner_Bibee": 676440,
     "Brady_Singer": 663903, "Carlos_Rodon": 592682, "Bowden_Francis": 670102,
     "German_Marquez": 606466, "Luis_Severino": 622663,
@@ -74,7 +74,7 @@ PITCHERS = {
     "Spencer_Strider": 675911, "Andrew_Heaney": 571760,
     "Justin_Verlander": 434378, "Shota_Imanaga": 684007, "Nathan_Eovaldi": 543135, 
     "Yusei_Kikuchi": 579328, "Noah_Cameron": 702070, "Logan_Gilbert": 669302, "Clayton_Kershaw": 477132,
-    "Janson_Junk": 676083, "Jack_Flaherty": 656427
+    "Janson_Junk": 676083, "Jack_Flaherty": 656427, "Clarke_Schmidt": 656427
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
