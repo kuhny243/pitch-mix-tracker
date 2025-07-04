@@ -74,7 +74,10 @@ PITCHERS = {
     "Spencer_Strider": 675911, "Andrew_Heaney": 571760,
     "Justin_Verlander": 434378, "Shota_Imanaga": 684007, "Nathan_Eovaldi": 543135, 
     "Yusei_Kikuchi": 579328, "Noah_Cameron": 702070, "Logan_Gilbert": 669302, "Clayton_Kershaw": 477132,
-    "Janson_Junk": 676083, "Jack_Flaherty": 656427, "Clarke_Schmidt": 657376, "Clarke_Schmidt": 690990
+    "Janson_Junk": 676083, "Jack_Flaherty": 656427, "Clarke_Schmidt": 657376, "Clarke_Schmidt": 690990,
+    "Quinn_Priester": 682990, "Reese_Olson": 681857, "Slade_Cecconi": 677944,
+    "Kumar_Rocker": 677958, "Reese_Olson": 681857, "Randy_Vasquez": 681190,
+    "Lance_Mccullers Jr.": 621121, "Adrian_Houser": 605288
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
