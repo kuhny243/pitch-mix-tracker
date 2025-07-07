@@ -71,3 +71,7 @@ game_pk,game_date,bucket,pitch_name
 777291,2025-06-30,Inning_2_leadoff,Sweeper
 777291,2025-06-30,Batter_3,Sinker
 777291,2025-06-30,Batter_2,Sweeper
+777227,2025-07-05,Inning_3_leadoff,Sinker
+777227,2025-07-05,Inning_2_leadoff,Sweeper
+777227,2025-07-05,Batter_3,Sinker
+777227,2025-07-05,Batter_2,Sinker

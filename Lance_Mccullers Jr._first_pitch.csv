@@ -29,3 +29,7 @@ game_pk,game_date,bucket,pitch_name
 777320,2025-06-28,Inning_2_leadoff,Sinker
 777320,2025-06-28,Batter_3,Sinker
 777320,2025-06-28,Batter_2,Cutter
+777235,2025-07-04,Inning_3_leadoff,Sinker
+777235,2025-07-04,Inning_2_leadoff,Sinker
+777235,2025-07-04,Batter_3,Cutter
+777235,2025-07-04,Batter_2,Sinker

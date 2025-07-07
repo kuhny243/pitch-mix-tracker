@@ -1,5 +1,7 @@
 bucket,pitch_name,count,pct
-Batter_2,4-Seam Fastball,1,100.0
-Batter_3,4-Seam Fastball,1,100.0
-Inning_2_leadoff,4-Seam Fastball,1,100.0
-Inning_3_leadoff,Slider,1,100.0
+Batter_2,4-Seam Fastball,1,50.0
+Batter_2,Slider,1,50.0
+Batter_3,4-Seam Fastball,2,100.0
+Inning_2_leadoff,4-Seam Fastball,2,100.0
+Inning_3_leadoff,4-Seam Fastball,1,50.0
+Inning_3_leadoff,Slider,1,50.0
