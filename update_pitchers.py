@@ -43,7 +43,7 @@ PITCHERS = {
     "Freddy_Peralta": 642547, "Drew_Rasmussen": 656876,
     "Pablo_Lopez": 642456, "Zac_Gallen": 668678, "Cade_Povich": 700249,
     "Miles_Mikolas": 571945, "AJ_Smith_Shawver": 700363, "Tyler_Mahle": 641816,
-    "Cristopher_Sanchez": 665742, "Chris_Sale": 519242, "Shane_Baz": 669358,
+    "Cristopher_Sanchez": 650911, "Chris_Sale": 519242, "Shane_Baz": 669358,
     "Emerson_Hancock": 676106, "MacKenzie_Gore": 669022, "Zach_Eflin": 621107,
     "Sean_Burke": 680732, "Taijuan_Walker": 592836, "Chris_Bassitt": 605135,
     "Jeffrey_Springs": 605488, "Luis_Ortiz": 656814, "Cal_Quantrill": 615698,
@@ -77,7 +77,8 @@ PITCHERS = {
     "Janson_Junk": 676083, "Jack_Flaherty": 656427, "Clarke_Schmidt": 657376, "Clarke_Schmidt": 690990,
     "Quinn_Priester": 682990, "Reese_Olson": 681857, "Slade_Cecconi": 677944,
     "Kumar_Rocker": 677958, "Reese_Olson": 681857, "Randy_Vasquez": 681190,
-    "Lance_Mccullers Jr.": 621121, "Adrian_Houser": 605288
+    "Lance_Mccullers Jr.": 621121, "Adrian_Houser": 605288, "Colton_Gordon": 676467,
+    "Keider_Montero": 672456, 
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
