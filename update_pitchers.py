@@ -78,7 +78,7 @@ PITCHERS = {
     "Quinn_Priester": 682990, "Reese_Olson": 681857, "Slade_Cecconi": 677944,
     "Kumar_Rocker": 677958, "Reese_Olson": 681857, "Randy_Vasquez": 681190,
     "Lance_Mccullers Jr.": 621121, "Adrian_Houser": 605288, "Colton_Gordon": 676467,
-    "Keider_Montero": 672456, "Michael_Soroka": 647336
+    "Keider_Montero": 672456, "Michael_Soroka": 647336, "Jonathan_Cannon": 686563
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
