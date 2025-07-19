@@ -31,7 +31,7 @@ PITCHERS = {
     "Colin_Rea": 607067, "Paul_Skenes": 694973, "Seth_Lugo": 607625,
     "Simeon_Woods_Richardson": 677943, "Ben_Lively": 594902,
     "Zack_Wheeler": 554430, "David_Peterson": 656849,
-    "Tyler_Anderson": 542881, "Brayan_Bello": 686880,
+    "Tyler_Anderson": 542881, "Brayan_Bello": 678349,
     "Andrew_Abbott": 671096, "Sonny_Gray": 543243, "Jose_Berrios": 621244,
     "Mitch_Keller": 656605, "Ben_Brown": 676962, "Kyle_Freeland": 607536,
     "Framber_Valdez": 664285, "Jose_Soriano": 667755, "Bryan_Woo": 693433,
