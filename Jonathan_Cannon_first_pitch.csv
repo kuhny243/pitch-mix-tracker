@@ -51,3 +51,7 @@ game_pk,game_date,bucket,pitch_name
 777146,2025-07-11,Inning_2_leadoff,Changeup
 777146,2025-07-11,Batter_3,Cutter
 777146,2025-07-11,Batter_2,Cutter
+777107,2025-07-18,Inning_3_leadoff,Sinker
+777107,2025-07-18,Inning_2_leadoff,Sinker
+777107,2025-07-18,Batter_3,Sinker
+777107,2025-07-18,Batter_2,Sinker
