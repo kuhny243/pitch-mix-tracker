@@ -70,3 +70,7 @@ game_pk,game_date,bucket,pitch_name
 777204,2025-07-07,Inning_2_leadoff,Sinker
 777204,2025-07-07,Batter_3,Slider
 777204,2025-07-07,Batter_2,Slow Curve
+777074,2025-07-20,Inning_3_leadoff,Slow Curve
+777074,2025-07-20,Inning_2_leadoff,Slider
+777074,2025-07-20,Batter_3,Sinker
+777074,2025-07-20,Batter_2,Slow Curve
