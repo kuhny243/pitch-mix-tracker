@@ -1,4 +1,6 @@
 bucket,pitch_name,count,pct
+Batter_1,4-Seam Fastball,19,95.0
+Batter_1,Changeup,1,5.0
 Batter_2,4-Seam Fastball,10,50.0
 Batter_2,Changeup,2,10.0
 Batter_2,Curveball,3,15.0

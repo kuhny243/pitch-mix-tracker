@@ -3,83 +3,104 @@ game_pk,game_date,bucket,pitch_name
 778534,2025-03-29,Inning_2_leadoff,Sinker
 778534,2025-03-29,Batter_3,Sinker
 778534,2025-03-29,Batter_2,Sinker
+778534,2025-03-29,Batter_1,Sinker
 778447,2025-04-04,Inning_3_leadoff,Knuckle Curve
 778447,2025-04-04,Inning_2_leadoff,Sinker
 778447,2025-04-04,Batter_3,Sinker
 778447,2025-04-04,Batter_2,Sinker
+778447,2025-04-04,Batter_1,Sinker
 778382,2025-04-10,Inning_3_leadoff,Sinker
 778382,2025-04-10,Inning_2_leadoff,Sinker
 778382,2025-04-10,Batter_3,Sinker
 778382,2025-04-10,Batter_2,Sinker
+778382,2025-04-10,Batter_1,Sinker
 778289,2025-04-16,Inning_3_leadoff,Knuckle Curve
 778289,2025-04-16,Inning_2_leadoff,Sinker
 778289,2025-04-16,Batter_3,Knuckle Curve
 778289,2025-04-16,Batter_2,Sinker
+778289,2025-04-16,Batter_1,Sinker
 778211,2025-04-22,Inning_3_leadoff,4-Seam Fastball
 778211,2025-04-22,Inning_2_leadoff,Sinker
 778211,2025-04-22,Batter_3,Sinker
 778211,2025-04-22,Batter_2,Sinker
+778211,2025-04-22,Batter_1,Sinker
 778144,2025-04-27,Inning_3_leadoff,Knuckle Curve
 778144,2025-04-27,Inning_2_leadoff,4-Seam Fastball
 778144,2025-04-27,Batter_3,4-Seam Fastball
 778144,2025-04-27,Batter_2,Knuckle Curve
+778144,2025-04-27,Batter_1,Sinker
 778085,2025-05-02,Inning_3_leadoff,Knuckle Curve
 778085,2025-05-02,Inning_2_leadoff,Knuckle Curve
 778085,2025-05-02,Batter_3,Sinker
 778085,2025-05-02,Batter_2,4-Seam Fastball
+778085,2025-05-02,Batter_1,Sinker
 778000,2025-05-08,Inning_3_leadoff,Slider
 778000,2025-05-08,Inning_2_leadoff,4-Seam Fastball
 778000,2025-05-08,Batter_3,4-Seam Fastball
 778000,2025-05-08,Batter_2,Sinker
+778000,2025-05-08,Batter_1,Sinker
 777932,2025-05-13,Inning_3_leadoff,Sinker
 777932,2025-05-13,Inning_2_leadoff,Knuckle Curve
 777932,2025-05-13,Batter_3,Knuckle Curve
 777932,2025-05-13,Batter_2,Sinker
+777932,2025-05-13,Batter_1,Sinker
 777853,2025-05-19,Inning_3_leadoff,Knuckle Curve
 777853,2025-05-19,Inning_2_leadoff,Sinker
 777853,2025-05-19,Batter_3,Knuckle Curve
 777853,2025-05-19,Batter_2,Sinker
+777853,2025-05-19,Batter_1,Sinker
 777781,2025-05-24,Inning_3_leadoff,Knuckle Curve
 777781,2025-05-24,Inning_2_leadoff,Sinker
 777781,2025-05-24,Batter_3,Sinker
 777781,2025-05-24,Batter_2,Sinker
+777781,2025-05-24,Batter_1,Sinker
 777721,2025-05-30,Inning_3_leadoff,Sinker
 777721,2025-05-30,Inning_2_leadoff,Knuckle Curve
 777721,2025-05-30,Batter_3,Knuckle Curve
 777721,2025-05-30,Batter_2,Sinker
+777721,2025-05-30,Batter_1,Sinker
 777649,2025-06-04,Inning_3_leadoff,4-Seam Fastball
 777649,2025-06-04,Inning_2_leadoff,Sinker
 777649,2025-06-04,Batter_3,Sinker
 777649,2025-06-04,Batter_2,Knuckle Curve
+777649,2025-06-04,Batter_1,Sinker
 777564,2025-06-10,Inning_3_leadoff,Sinker
 777564,2025-06-10,Inning_2_leadoff,Knuckle Curve
 777564,2025-06-10,Batter_3,Sinker
 777564,2025-06-10,Batter_2,Knuckle Curve
+777564,2025-06-10,Batter_1,Sinker
 777487,2025-06-16,Inning_3_leadoff,Knuckle Curve
 777487,2025-06-16,Inning_2_leadoff,4-Seam Fastball
 777487,2025-06-16,Batter_3,Knuckle Curve
 777487,2025-06-16,Batter_2,Knuckle Curve
+777487,2025-06-16,Batter_1,Sinker
 777414,2025-06-21,Inning_3_leadoff,4-Seam Fastball
 777414,2025-06-21,Inning_2_leadoff,Knuckle Curve
 777414,2025-06-21,Batter_3,Sinker
 777414,2025-06-21,Batter_2,Sinker
+777414,2025-06-21,Batter_1,Sinker
 777331,2025-06-27,Inning_3_leadoff,Knuckle Curve
 777331,2025-06-27,Inning_2_leadoff,Sinker
 777331,2025-06-27,Batter_3,Split-Finger
 777331,2025-06-27,Batter_2,Sinker
+777331,2025-06-27,Batter_1,Sinker
 777261,2025-07-03,Inning_3_leadoff,Knuckle Curve
 777261,2025-07-03,Inning_2_leadoff,Sinker
 777261,2025-07-03,Batter_3,Sinker
 777261,2025-07-03,Batter_2,Knuckle Curve
+777261,2025-07-03,Batter_1,Sinker
 777180,2025-07-08,Inning_3_leadoff,Sinker
 777180,2025-07-08,Inning_2_leadoff,Sinker
 777180,2025-07-08,Batter_3,Knuckle Curve
 777180,2025-07-08,Batter_2,Sinker
+777180,2025-07-08,Batter_1,Sinker
 777115,2025-07-13,Inning_3_leadoff,Sinker
 777115,2025-07-13,Inning_2_leadoff,Sinker
 777115,2025-07-13,Batter_3,Sinker
 777115,2025-07-13,Batter_2,Knuckle Curve
+777115,2025-07-13,Batter_1,Sinker
 777078,2025-07-20,Inning_3_leadoff,Sinker
 777078,2025-07-20,Inning_2_leadoff,4-Seam Fastball
 777078,2025-07-20,Batter_3,Sinker
 777078,2025-07-20,Batter_2,Sinker
+777078,2025-07-20,Batter_1,Sinker

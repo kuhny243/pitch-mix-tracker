@@ -1,4 +1,6 @@
 bucket,pitch_name,count,pct
+Batter_1,Changeup,1,6.7
+Batter_1,Sinker,14,93.3
 Batter_2,Sinker,11,73.3
 Batter_2,Slider,4,26.7
 Batter_3,Sinker,8,53.3

@@ -1,4 +1,6 @@
 bucket,pitch_name,count,pct
+Batter_1,Cutter,1,7.1
+Batter_1,Sinker,13,92.9
 Batter_2,Curveball,1,7.1
 Batter_2,Cutter,4,28.6
 Batter_2,Sinker,9,64.3

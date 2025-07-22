@@ -3,63 +3,79 @@ game_pk,game_date,bucket,pitch_name
 778486,2025-04-01,Inning_2_leadoff,4-Seam Fastball
 778486,2025-04-01,Batter_3,Split-Finger
 778486,2025-04-01,Batter_2,Sinker
+778486,2025-04-01,Batter_1,4-Seam Fastball
 778424,2025-04-07,Inning_3_leadoff,4-Seam Fastball
 778424,2025-04-07,Inning_2_leadoff,Sinker
 778424,2025-04-07,Batter_3,Slider
 778424,2025-04-07,Batter_2,Slider
+778424,2025-04-07,Batter_1,4-Seam Fastball
 778335,2025-04-13,Inning_3_leadoff,Slider
 778335,2025-04-13,Inning_2_leadoff,4-Seam Fastball
 778335,2025-04-13,Batter_3,Slider
 778335,2025-04-13,Batter_2,4-Seam Fastball
+778335,2025-04-13,Batter_1,Split-Finger
 778265,2025-04-19,Inning_3_leadoff,4-Seam Fastball
 778265,2025-04-19,Inning_2_leadoff,4-Seam Fastball
 778265,2025-04-19,Batter_3,Split-Finger
 778265,2025-04-19,Batter_2,Slider
+778265,2025-04-19,Batter_1,4-Seam Fastball
 778168,2025-04-26,Inning_3_leadoff,4-Seam Fastball
 778168,2025-04-26,Inning_2_leadoff,Slurve
 778168,2025-04-26,Batter_3,4-Seam Fastball
 778168,2025-04-26,Batter_2,Slider
+778168,2025-04-26,Batter_1,4-Seam Fastball
 778101,2025-05-01,Inning_3_leadoff,4-Seam Fastball
 778101,2025-05-01,Inning_2_leadoff,Slider
 778101,2025-05-01,Batter_3,Sinker
 778101,2025-05-01,Batter_2,Slider
+778101,2025-05-01,Batter_1,Sinker
 778004,2025-05-08,Inning_3_leadoff,4-Seam Fastball
 778004,2025-05-08,Inning_2_leadoff,4-Seam Fastball
 778004,2025-05-08,Batter_3,Slider
 778004,2025-05-08,Batter_2,Sinker
+778004,2025-05-08,Batter_1,4-Seam Fastball
 777796,2025-05-24,Inning_3_leadoff,Slider
 777796,2025-05-24,Inning_2_leadoff,4-Seam Fastball
 777796,2025-05-24,Batter_3,4-Seam Fastball
 777796,2025-05-24,Batter_2,4-Seam Fastball
+777796,2025-05-24,Batter_1,4-Seam Fastball
 777711,2025-05-30,Inning_3_leadoff,Split-Finger
 777711,2025-05-30,Inning_2_leadoff,Slider
 777711,2025-05-30,Batter_3,4-Seam Fastball
 777711,2025-05-30,Batter_2,4-Seam Fastball
+777711,2025-05-30,Batter_1,4-Seam Fastball
 777634,2025-06-05,Inning_3_leadoff,4-Seam Fastball
 777634,2025-06-05,Inning_2_leadoff,4-Seam Fastball
 777634,2025-06-05,Batter_3,4-Seam Fastball
 777634,2025-06-05,Batter_2,4-Seam Fastball
+777634,2025-06-05,Batter_1,4-Seam Fastball
 777562,2025-06-11,Inning_3_leadoff,4-Seam Fastball
 777562,2025-06-11,Inning_2_leadoff,4-Seam Fastball
 777562,2025-06-11,Batter_3,Slider
 777562,2025-06-11,Batter_2,4-Seam Fastball
+777562,2025-06-11,Batter_1,4-Seam Fastball
 777475,2025-06-17,Inning_3_leadoff,4-Seam Fastball
 777475,2025-06-17,Inning_2_leadoff,4-Seam Fastball
 777475,2025-06-17,Batter_3,Slider
 777475,2025-06-17,Batter_2,4-Seam Fastball
+777475,2025-06-17,Batter_1,4-Seam Fastball
 777409,2025-06-22,Inning_3_leadoff,4-Seam Fastball
 777409,2025-06-22,Inning_2_leadoff,4-Seam Fastball
 777409,2025-06-22,Batter_3,Slurve
 777409,2025-06-22,Batter_2,Slider
+777409,2025-06-22,Batter_1,Sinker
 777324,2025-06-28,Inning_3_leadoff,Slurve
 777324,2025-06-28,Inning_2_leadoff,4-Seam Fastball
 777324,2025-06-28,Batter_3,Slider
 777324,2025-06-28,Batter_2,Split-Finger
+777324,2025-06-28,Batter_1,Sinker
 777240,2025-07-05,Inning_3_leadoff,Slider
 777240,2025-07-05,Inning_2_leadoff,4-Seam Fastball
 777240,2025-07-05,Batter_3,4-Seam Fastball
 777240,2025-07-05,Batter_2,4-Seam Fastball
+777240,2025-07-05,Batter_1,4-Seam Fastball
 777145,2025-07-12,Inning_3_leadoff,4-Seam Fastball
 777145,2025-07-12,Inning_2_leadoff,Sinker
 777145,2025-07-12,Batter_3,Split-Finger
 777145,2025-07-12,Batter_2,Sinker
+777145,2025-07-12,Batter_1,4-Seam Fastball
