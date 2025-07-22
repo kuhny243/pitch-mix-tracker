@@ -109,6 +109,7 @@ def tag_slot_seq(df):
 
 def bucket(row):
     if row.first_pitch and row.balls==0 and row.strikes==0:
+        if row.inning==1 and row.pa_order==1: return "Batter_1"
         if row.inning==1 and row.pa_order==2: return "Batter_2"
         if row.inning==1 and row.pa_order==3: return "Batter_3"
         if row.inning==2 and row.pa_order==1: return "Inning_2_leadoff"
@@ -145,7 +146,6 @@ for name,pid in PITCHERS.items():
     df = df.dropna(subset=["bucket"])
     if df.empty: continue
 
-    # derive full readable name
     df["pitch_name_full"] = df.apply(full_pitch_name, axis=1)
 
     detail = (
