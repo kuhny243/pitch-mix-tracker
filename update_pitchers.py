@@ -64,7 +64,7 @@ PITCHERS = {
     "Yoshinobu_Yamamoto": 808967, "Max_Meyer": 676974, "Logan_Webb": 657277,
     "Joe_Ryan": 657746, "Dustin_May": 669160, "Mitchell_Parker": 680730,
     "Charlie_Morton": 119424, "Nick_Martinez": 607259, "Taj_Bradley": 671737,
-    "Chris_Paddack": 663978, "Luis_Castillo": 664057, "Tomoyuki_Sugano": 608372,
+    "Chris_Paddack": 663978, "Luis_Castillo": 622491, "Tomoyuki_Sugano": 608372,
     "Chase_Dollander": 801403, "Tylor_Megill": 656731,
     "Michael_Lorenzen": 547179, "Jose_Quintana": 500779,
     "Andre_Pallante": 669467, "Hunter_Dobbins": 690928,
