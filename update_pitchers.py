@@ -36,7 +36,7 @@ PITCHERS = {
     "Mitch_Keller": 656605, "Ben_Brown": 676962, "Kyle_Freeland": 607536,
     "Framber_Valdez": 664285, "Jose_Soriano": 667755, "Bryan_Woo": 693433,
     "Brandon_Pfaadt": 694297, "Kevin_Gausman": 592332, "Tanner_Bibee": 676440,
-    "Brady_Singer": 663903, "Carlos_Rodon": 592682, "Bowden_Francis": 670102,
+    "Brady_Singer": 663903, "Carlos_Rodon": 607074, "Bowden_Francis": 670102,
     "German_Marquez": 606466, "Luis_Severino": 622663,
     "Trevor_Williams": 592866, "Matthew_Boyd": 571510, "Hunter_Greene": 668881,
     "Griffin_Canning": 656288, "Shane_Smith": 681343, "Landen_Roupp": 694738,
