@@ -98,3 +98,8 @@ game_pk,game_date,bucket,pitch_name
 777002,2025-07-26,Batter_3,4-Seam Fastball
 777002,2025-07-26,Batter_2,Sinker
 777002,2025-07-26,Batter_1,Sinker
+776919,2025-08-01,Inning_3_leadoff,Changeup
+776919,2025-08-01,Inning_2_leadoff,4-Seam Fastball
+776919,2025-08-01,Batter_3,Slow Curve
+776919,2025-08-01,Batter_2,4-Seam Fastball
+776919,2025-08-01,Batter_1,Changeup
