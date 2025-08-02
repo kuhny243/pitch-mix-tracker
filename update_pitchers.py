@@ -79,7 +79,7 @@ PITCHERS = {
     "Kumar_Rocker": 677958, "Reese_Olson": 681857, "Randy_Vasquez": 681190,
     "Lance_Mccullers Jr.": 621121, "Adrian_Houser": 605288, "Colton_Gordon": 676467,
     "Keider_Montero": 672456, "Michael_Soroka": 647336, "Jonathan_Cannon": 686563,
-    "Ryne_Nelson": 669194, "Logan_Evans": 688138, "Ryan_Gusto": 687473
+    "Ryne_Nelson": 669194, "Logan_Evans": 688138, "Ryan_Gusto": 687473, "J.T. Ginn": 669372
 }
 
 # ── 2. Helper functions ────────────────────────────────────────────────
