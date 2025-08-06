@@ -1,8 +1,11 @@
 bucket,pitch_name,count,pct
-Batter_1,4-Seam Fastball,4,100.0
-Batter_2,4-Seam Fastball,3,75.0
-Batter_2,Slider,1,25.0
-Batter_3,4-Seam Fastball,4,100.0
-Inning_2_leadoff,4-Seam Fastball,4,100.0
-Inning_3_leadoff,4-Seam Fastball,3,75.0
-Inning_3_leadoff,Slider,1,25.0
+Batter_1,4-Seam Fastball,5,100.0
+Batter_2,4-Seam Fastball,3,60.0
+Batter_2,Curveball,1,20.0
+Batter_2,Slider,1,20.0
+Batter_3,4-Seam Fastball,4,80.0
+Batter_3,Changeup,1,20.0
+Inning_2_leadoff,4-Seam Fastball,4,80.0
+Inning_2_leadoff,Slider,1,20.0
+Inning_3_leadoff,4-Seam Fastball,4,80.0
+Inning_3_leadoff,Slider,1,20.0
