@@ -119,3 +119,8 @@ game_pk,game_date,bucket,pitch_name
 776745,2025-08-14,Batter_3,Cutter
 776745,2025-08-14,Batter_2,Cutter
 776745,2025-08-14,Batter_1,4-Seam Fastball
+776672,2025-08-19,Inning_3_leadoff,Sweeper
+776672,2025-08-19,Inning_2_leadoff,4-Seam Fastball
+776672,2025-08-19,Batter_3,Cutter
+776672,2025-08-19,Batter_2,Sinker
+776672,2025-08-19,Batter_1,4-Seam Fastball
