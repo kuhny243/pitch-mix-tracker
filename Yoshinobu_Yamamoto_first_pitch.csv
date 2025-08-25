@@ -116,3 +116,8 @@ game_pk,game_date,bucket,pitch_name
 776693,2025-08-18,Batter_3,Cutter
 776693,2025-08-18,Batter_2,Cutter
 776693,2025-08-18,Batter_1,Sinker
+776603,2025-08-24,Inning_3_leadoff,Split-Finger
+776603,2025-08-24,Inning_2_leadoff,Cutter
+776603,2025-08-24,Batter_3,Sinker
+776603,2025-08-24,Batter_2,Cutter
+776603,2025-08-24,Batter_1,Slider
