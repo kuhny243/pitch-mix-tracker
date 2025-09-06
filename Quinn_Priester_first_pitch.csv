@@ -44,7 +44,7 @@ game_pk,game_date,bucket,pitch_name
 777568,2025-06-10,Batter_2,Cutter
 777568,2025-06-10,Batter_1,Sinker
 777492,2025-06-15,Inning_3_leadoff,Sinker
-777492,2025-06-15,Inning_2_leadoff,Slider
+777492,2025-06-15,Inning_2_leadoff,Cutter
 777492,2025-06-15,Batter_3,Sinker
 777492,2025-06-15,Batter_2,Sinker
 777492,2025-06-15,Batter_1,Sinker
@@ -103,3 +103,8 @@ game_pk,game_date,bucket,pitch_name
 776527,2025-08-30,Batter_3,Sinker
 776527,2025-08-30,Batter_2,Cutter
 776527,2025-08-30,Batter_1,Sinker
+776453,2025-09-05,Inning_3_leadoff,Sinker
+776453,2025-09-05,Inning_2_leadoff,Curveball
+776453,2025-09-05,Batter_3,Sinker
+776453,2025-09-05,Batter_2,Sinker
+776453,2025-09-05,Batter_1,Sinker
