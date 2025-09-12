@@ -1,16 +1,16 @@
 bucket,pitch_name,count,pct
-Batter_1,Sinker,29,100.0
-Batter_2,4-Seam Fastball,1,3.4
-Batter_2,Knuckle Curve,12,41.4
-Batter_2,Sinker,16,55.2
-Batter_3,4-Seam Fastball,3,10.3
-Batter_3,Knuckle Curve,8,27.6
-Batter_3,Sinker,18,62.1
-Inning_2_leadoff,4-Seam Fastball,5,17.2
-Inning_2_leadoff,Knuckle Curve,8,27.6
-Inning_2_leadoff,Sinker,16,55.2
-Inning_3_leadoff,4-Seam Fastball,4,13.8
-Inning_3_leadoff,Knuckle Curve,10,34.5
-Inning_3_leadoff,Sinker,13,44.8
-Inning_3_leadoff,Slider,1,3.4
-Inning_3_leadoff,Split-Finger,1,3.4
+Batter_1,Sinker,30,100.0
+Batter_2,4-Seam Fastball,1,3.3
+Batter_2,Knuckle Curve,13,43.3
+Batter_2,Sinker,16,53.3
+Batter_3,4-Seam Fastball,3,10.0
+Batter_3,Knuckle Curve,9,30.0
+Batter_3,Sinker,18,60.0
+Inning_2_leadoff,4-Seam Fastball,5,16.7
+Inning_2_leadoff,Knuckle Curve,8,26.7
+Inning_2_leadoff,Sinker,17,56.7
+Inning_3_leadoff,4-Seam Fastball,4,13.3
+Inning_3_leadoff,Knuckle Curve,11,36.7
+Inning_3_leadoff,Sinker,13,43.3
+Inning_3_leadoff,Slider,1,3.3
+Inning_3_leadoff,Split-Finger,1,3.3

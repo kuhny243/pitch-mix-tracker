@@ -144,3 +144,8 @@ game_pk,game_date,bucket,pitch_name
 776444,2025-09-05,Batter_3,Knuckle Curve
 776444,2025-09-05,Batter_2,Knuckle Curve
 776444,2025-09-05,Batter_1,Sinker
+776362,2025-09-11,Inning_3_leadoff,Knuckle Curve
+776362,2025-09-11,Inning_2_leadoff,Sinker
+776362,2025-09-11,Batter_3,Knuckle Curve
+776362,2025-09-11,Batter_2,Knuckle Curve
+776362,2025-09-11,Batter_1,Sinker
