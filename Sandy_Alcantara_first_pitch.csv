@@ -9,7 +9,7 @@ game_pk,game_date,bucket,pitch_name
 778497,2025-04-01,Batter_3,4-Seam Fastball
 778497,2025-04-01,Batter_2,Curveball
 778497,2025-04-01,Batter_1,4-Seam Fastball
-778354,2025-04-12,Inning_3_leadoff,4-Seam Fastball
+778354,2025-04-12,Inning_3_leadoff,Sinker
 778354,2025-04-12,Inning_2_leadoff,Changeup
 778354,2025-04-12,Batter_3,Changeup
 778354,2025-04-12,Batter_2,Sinker
@@ -58,7 +58,7 @@ game_pk,game_date,bucket,pitch_name
 777666,2025-06-03,Batter_3,Slider
 777666,2025-06-03,Batter_2,Sinker
 777666,2025-06-03,Batter_1,Sinker
-777566,2025-06-10,Inning_3_leadoff,4-Seam Fastball
+777566,2025-06-10,Inning_3_leadoff,Sinker
 777566,2025-06-10,Inning_2_leadoff,Sinker
 777566,2025-06-10,Batter_3,Curveball
 777566,2025-06-10,Batter_2,4-Seam Fastball
@@ -107,19 +107,19 @@ game_pk,game_date,bucket,pitch_name
 776875,2025-08-04,Inning_2_leadoff,Sinker
 776875,2025-08-04,Batter_3,Sinker
 776875,2025-08-04,Batter_2,Curveball
-776875,2025-08-04,Batter_1,4-Seam Fastball
+776875,2025-08-04,Batter_1,Sinker
 776819,2025-08-09,Inning_3_leadoff,Curveball
 776819,2025-08-09,Inning_2_leadoff,Changeup
 776819,2025-08-09,Batter_3,Changeup
-776819,2025-08-09,Batter_2,4-Seam Fastball
-776819,2025-08-09,Batter_1,4-Seam Fastball
+776819,2025-08-09,Batter_2,Sinker
+776819,2025-08-09,Batter_1,Sinker
 776741,2025-08-15,Inning_3_leadoff,Sinker
 776741,2025-08-15,Inning_2_leadoff,Curveball
 776741,2025-08-15,Batter_3,Slider
 776741,2025-08-15,Batter_2,Curveball
 776741,2025-08-15,Batter_1,Changeup
 776670,2025-08-20,Inning_3_leadoff,Sinker
-776670,2025-08-20,Inning_2_leadoff,4-Seam Fastball
+776670,2025-08-20,Inning_2_leadoff,Sinker
 776670,2025-08-20,Batter_3,4-Seam Fastball
 776670,2025-08-20,Batter_2,Curveball
 776670,2025-08-20,Batter_1,4-Seam Fastball
@@ -143,7 +143,7 @@ game_pk,game_date,bucket,pitch_name
 776366,2025-09-12,Batter_3,Curveball
 776366,2025-09-12,Batter_2,Curveball
 776366,2025-09-12,Batter_1,Sinker
-776270,2025-09-18,Inning_3_leadoff,4-Seam Fastball
+776270,2025-09-18,Inning_3_leadoff,Sinker
 776270,2025-09-18,Inning_2_leadoff,Curveball
 776270,2025-09-18,Batter_3,Changeup
 776270,2025-09-18,Batter_2,4-Seam Fastball
