@@ -15,7 +15,7 @@ game_pk,game_date,bucket,pitch_name
 778408,2025-04-08,Batter_2,Slider
 778408,2025-04-08,Batter_1,4-Seam Fastball
 778321,2025-04-14,Inning_3_leadoff,4-Seam Fastball
-778321,2025-04-14,Inning_2_leadoff,Split-Finger
+778321,2025-04-14,Inning_2_leadoff,Sinker
 778321,2025-04-14,Batter_3,Split-Finger
 778321,2025-04-14,Batter_2,Split-Finger
 778321,2025-04-14,Batter_1,4-Seam Fastball
@@ -112,7 +112,7 @@ game_pk,game_date,bucket,pitch_name
 776904,2025-08-02,Inning_3_leadoff,Sweeper
 776904,2025-08-02,Inning_2_leadoff,Sinker
 776904,2025-08-02,Batter_3,4-Seam Fastball
-776904,2025-08-02,Batter_2,4-Seam Fastball
+776904,2025-08-02,Batter_2,Sinker
 776904,2025-08-02,Batter_1,4-Seam Fastball
 776840,2025-08-07,Inning_3_leadoff,Sweeper
 776840,2025-08-07,Inning_2_leadoff,4-Seam Fastball
