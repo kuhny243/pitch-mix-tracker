@@ -1,8 +1,9 @@
 bucket,pitch_name,count,pct
 Batter_1,4-Seam Fastball,27,84.4
+Batter_1,Changeup,1,3.1
 Batter_1,Knuckle Curve,1,3.1
 Batter_1,Sinker,1,3.1
-Batter_1,Slider,3,9.4
+Batter_1,Slider,2,6.2
 Batter_2,4-Seam Fastball,18,56.2
 Batter_2,Knuckle Curve,2,6.2
 Batter_2,Sinker,1,3.1
