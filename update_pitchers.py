@@ -6,7 +6,7 @@ import pandas as pd, time
 from pandas.errors import ParserError, EmptyDataError
 from datetime import date
 
-START, END = "2025-03-01", date.today().isoformat()
+START, END = "2025-03-01","2025-12-31"
 
 # ── full-name lookup for pitch_type codes ──────────────────────────────
 CODE_TO_NAME = {
