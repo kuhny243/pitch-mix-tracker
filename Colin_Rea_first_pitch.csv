@@ -25,7 +25,7 @@ game_pk,game_date,bucket,pitch_name
 824683,2026-05-06,Batter_2,4-Seam Fastball
 824683,2026-05-06,Batter_1,4-Seam Fastball
 824927,2026-05-12,Inning_3_leadoff,4-Seam Fastball
-824927,2026-05-12,Inning_2_leadoff,Split-Finger
+824927,2026-05-12,Inning_2_leadoff,Changeup
 824927,2026-05-12,Batter_3,4-Seam Fastball
 824927,2026-05-12,Batter_2,4-Seam Fastball
 824927,2026-05-12,Batter_1,4-Seam Fastball
@@ -49,3 +49,8 @@ game_pk,game_date,bucket,pitch_name
 824671,2026-06-03,Batter_3,Slider
 824671,2026-06-03,Batter_2,4-Seam Fastball
 824671,2026-06-03,Batter_1,4-Seam Fastball
+824347,2026-06-09,Inning_3_leadoff,Sinker
+824347,2026-06-09,Inning_2_leadoff,Sweeper
+824347,2026-06-09,Batter_3,4-Seam Fastball
+824347,2026-06-09,Batter_2,4-Seam Fastball
+824347,2026-06-09,Batter_1,4-Seam Fastball

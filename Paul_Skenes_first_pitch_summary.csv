@@ -1,20 +1,22 @@
 bucket,pitch_name,count,pct
-Batter_1,4-Seam Fastball,10,76.9
-Batter_1,Sinker,1,7.7
-Batter_1,Split-Finger,2,15.4
-Batter_2,4-Seam Fastball,2,15.4
-Batter_2,Sinker,4,30.8
-Batter_2,Split-Finger,2,15.4
-Batter_2,Sweeper,5,38.5
-Batter_3,4-Seam Fastball,6,46.2
-Batter_3,Sinker,2,15.4
-Batter_3,Split-Finger,3,23.1
-Batter_3,Sweeper,2,15.4
-Inning_2_leadoff,4-Seam Fastball,4,33.3
-Inning_2_leadoff,Curveball,1,8.3
-Inning_2_leadoff,Sinker,1,8.3
-Inning_2_leadoff,Split-Finger,1,8.3
-Inning_2_leadoff,Sweeper,5,41.7
-Inning_3_leadoff,4-Seam Fastball,7,58.3
-Inning_3_leadoff,Sinker,3,25.0
-Inning_3_leadoff,Sweeper,2,16.7
+Batter_1,4-Seam Fastball,10,71.4
+Batter_1,Sinker,1,7.1
+Batter_1,Split-Finger,3,21.4
+Batter_2,4-Seam Fastball,2,14.3
+Batter_2,Sinker,4,28.6
+Batter_2,Slider,1,7.1
+Batter_2,Split-Finger,2,14.3
+Batter_2,Sweeper,5,35.7
+Batter_3,4-Seam Fastball,6,42.9
+Batter_3,Changeup,1,7.1
+Batter_3,Sinker,2,14.3
+Batter_3,Split-Finger,3,21.4
+Batter_3,Sweeper,2,14.3
+Inning_2_leadoff,4-Seam Fastball,5,38.5
+Inning_2_leadoff,Curveball,1,7.7
+Inning_2_leadoff,Sinker,1,7.7
+Inning_2_leadoff,Split-Finger,1,7.7
+Inning_2_leadoff,Sweeper,5,38.5
+Inning_3_leadoff,4-Seam Fastball,8,61.5
+Inning_3_leadoff,Sinker,3,23.1
+Inning_3_leadoff,Sweeper,2,15.4
