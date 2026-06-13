@@ -46,7 +46,7 @@ game_pk,game_date,bucket,pitch_name
 822814,2026-05-23,Batter_1,Cutter
 824834,2026-05-28,Inning_3_leadoff,Sinker
 824834,2026-05-28,Inning_2_leadoff,Slider
-824834,2026-05-28,Batter_3,Slider
+824834,2026-05-28,Batter_3,Curveball
 824834,2026-05-28,Batter_2,Sinker
 824834,2026-05-28,Batter_1,Sinker
 824917,2026-06-03,Inning_3_leadoff,Slider
@@ -57,5 +57,5 @@ game_pk,game_date,bucket,pitch_name
 822806,2026-06-08,Inning_3_leadoff,Sinker
 822806,2026-06-08,Inning_2_leadoff,Slider
 822806,2026-06-08,Batter_3,Sinker
-822806,2026-06-08,Batter_2,Curveball
+822806,2026-06-08,Batter_2,Slow Curve
 822806,2026-06-08,Batter_1,Cutter
