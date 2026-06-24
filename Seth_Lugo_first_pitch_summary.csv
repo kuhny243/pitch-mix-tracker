@@ -13,7 +13,8 @@ Batter_3,Slider,1,6.7
 Inning_2_leadoff,4-Seam Fastball,7,46.7
 Inning_2_leadoff,Sinker,7,46.7
 Inning_2_leadoff,Sweeper,1,6.7
-Inning_3_leadoff,4-Seam Fastball,4,26.7
+Inning_3_leadoff,4-Seam Fastball,3,20.0
+Inning_3_leadoff,Changeup,1,6.7
 Inning_3_leadoff,Curveball,3,20.0
 Inning_3_leadoff,Cutter,1,6.7
 Inning_3_leadoff,Sinker,4,26.7
