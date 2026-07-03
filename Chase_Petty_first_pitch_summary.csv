@@ -1,0 +1,8 @@
+bucket,pitch_name,count,pct
+Batter_1,Sinker,2,100.0
+Batter_2,Sinker,2,100.0
+Batter_3,Sinker,2,100.0
+Inning_2_leadoff,Sinker,1,50.0
+Inning_2_leadoff,Slider,1,50.0
+Inning_3_leadoff,Changeup,1,50.0
+Inning_3_leadoff,Slider,1,50.0

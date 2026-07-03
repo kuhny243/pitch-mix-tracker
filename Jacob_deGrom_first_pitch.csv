@@ -1,0 +1,86 @@
+game_pk,game_date,bucket,pitch_name
+824861,2026-03-31,Inning_3_leadoff,4-Seam Fastball
+824861,2026-03-31,Inning_2_leadoff,4-Seam Fastball
+824861,2026-03-31,Batter_3,Slider
+824861,2026-03-31,Batter_2,4-Seam Fastball
+824861,2026-03-31,Batter_1,4-Seam Fastball
+822918,2026-04-06,Inning_3_leadoff,Changeup
+822918,2026-04-06,Inning_2_leadoff,4-Seam Fastball
+822918,2026-04-06,Batter_3,4-Seam Fastball
+822918,2026-04-06,Batter_2,4-Seam Fastball
+822918,2026-04-06,Batter_1,4-Seam Fastball
+823966,2026-04-12,Inning_3_leadoff,4-Seam Fastball
+823966,2026-04-12,Inning_2_leadoff,Curveball
+823966,2026-04-12,Batter_3,4-Seam Fastball
+823966,2026-04-12,Batter_2,4-Seam Fastball
+823966,2026-04-12,Batter_1,4-Seam Fastball
+823152,2026-04-17,Inning_3_leadoff,4-Seam Fastball
+823152,2026-04-17,Inning_2_leadoff,4-Seam Fastball
+823152,2026-04-17,Batter_3,4-Seam Fastball
+823152,2026-04-17,Batter_2,Curveball
+823152,2026-04-17,Batter_1,4-Seam Fastball
+822912,2026-04-23,Inning_3_leadoff,Slider
+822912,2026-04-23,Inning_2_leadoff,4-Seam Fastball
+822912,2026-04-23,Batter_3,Curveball
+822912,2026-04-23,Batter_2,4-Seam Fastball
+822912,2026-04-23,Batter_1,4-Seam Fastball
+822908,2026-04-28,Inning_3_leadoff,Slider
+822908,2026-04-28,Inning_2_leadoff,4-Seam Fastball
+822908,2026-04-28,Batter_3,4-Seam Fastball
+822908,2026-04-28,Batter_2,Curveball
+822908,2026-04-28,Batter_1,4-Seam Fastball
+823553,2026-05-05,Inning_3_leadoff,Slider
+823553,2026-05-05,Inning_2_leadoff,4-Seam Fastball
+823553,2026-05-05,Batter_3,4-Seam Fastball
+823553,2026-05-05,Batter_2,4-Seam Fastball
+823553,2026-05-05,Batter_1,4-Seam Fastball
+822902,2026-05-10,Inning_3_leadoff,4-Seam Fastball
+822902,2026-05-10,Inning_2_leadoff,Slider
+822902,2026-05-10,Batter_3,Slider
+822902,2026-05-10,Batter_2,4-Seam Fastball
+822902,2026-05-10,Batter_1,4-Seam Fastball
+824193,2026-05-16,Inning_3_leadoff,Slider
+824193,2026-05-16,Inning_2_leadoff,Slider
+824193,2026-05-16,Batter_3,4-Seam Fastball
+824193,2026-05-16,Batter_2,4-Seam Fastball
+824193,2026-05-16,Batter_1,4-Seam Fastball
+824029,2026-05-22,Inning_3_leadoff,Changeup
+824029,2026-05-22,Inning_2_leadoff,Curveball
+824029,2026-05-22,Batter_3,Curveball
+824029,2026-05-22,Batter_2,4-Seam Fastball
+824029,2026-05-22,Batter_1,4-Seam Fastball
+822897,2026-05-27,Inning_3_leadoff,4-Seam Fastball
+822897,2026-05-27,Inning_2_leadoff,4-Seam Fastball
+822897,2026-05-27,Batter_3,Slider
+822897,2026-05-27,Batter_2,Curveball
+822897,2026-05-27,Batter_1,Slider
+823050,2026-06-01,Inning_3_leadoff,Slider
+823050,2026-06-01,Inning_2_leadoff,4-Seam Fastball
+823050,2026-06-01,Batter_3,4-Seam Fastball
+823050,2026-06-01,Batter_2,Slider
+823050,2026-06-01,Batter_1,4-Seam Fastball
+822890,2026-06-07,Inning_3_leadoff,4-Seam Fastball
+822890,2026-06-07,Inning_2_leadoff,4-Seam Fastball
+822890,2026-06-07,Batter_3,4-Seam Fastball
+822890,2026-06-07,Batter_2,4-Seam Fastball
+822890,2026-06-07,Batter_1,4-Seam Fastball
+824749,2026-06-13,Inning_3_leadoff,4-Seam Fastball
+824749,2026-06-13,Inning_2_leadoff,Slider
+824749,2026-06-13,Batter_3,4-Seam Fastball
+824749,2026-06-13,Batter_2,4-Seam Fastball
+824749,2026-06-13,Batter_1,4-Seam Fastball
+822886,2026-06-19,Inning_3_leadoff,Slider
+822886,2026-06-19,Inning_2_leadoff,4-Seam Fastball
+822886,2026-06-19,Batter_3,4-Seam Fastball
+822886,2026-06-19,Batter_2,4-Seam Fastball
+822886,2026-06-19,Batter_1,Slider
+823850,2026-06-24,Inning_3_leadoff,4-Seam Fastball
+823850,2026-06-24,Inning_2_leadoff,Slider
+823850,2026-06-24,Batter_3,Slider
+823850,2026-06-24,Batter_2,4-Seam Fastball
+823850,2026-06-24,Batter_1,4-Seam Fastball
+824418,2026-06-30,Inning_3_leadoff,4-Seam Fastball
+824418,2026-06-30,Inning_2_leadoff,4-Seam Fastball
+824418,2026-06-30,Batter_3,4-Seam Fastball
+824418,2026-06-30,Batter_2,Slider
+824418,2026-06-30,Batter_1,Curveball

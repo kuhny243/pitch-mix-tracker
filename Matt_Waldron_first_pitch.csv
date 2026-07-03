@@ -1,0 +1,16 @@
+game_pk,game_date,bucket,pitch_name
+824048,2026-04-17,Inning_3_leadoff,Sweeper
+824048,2026-04-17,Inning_2_leadoff,Sinker
+824048,2026-04-17,Batter_3,Sinker
+824048,2026-04-17,Batter_2,Sweeper
+824048,2026-04-17,Batter_1,Knuckleball
+824368,2026-04-23,Inning_3_leadoff,Sweeper
+824368,2026-04-23,Inning_2_leadoff,Cutter
+824368,2026-04-23,Batter_3,Sweeper
+824368,2026-04-23,Batter_2,Knuckleball
+824368,2026-04-23,Batter_1,Knuckleball
+823312,2026-04-29,Inning_3_leadoff,Knuckleball
+823312,2026-04-29,Inning_2_leadoff,Sweeper
+823312,2026-04-29,Batter_3,Knuckleball
+823312,2026-04-29,Batter_2,Sweeper
+823312,2026-04-29,Batter_1,Sinker

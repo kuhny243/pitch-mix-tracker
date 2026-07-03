@@ -1,0 +1,59 @@
+game_pk,game_date,bucket,pitch_name
+822991,2026-04-26,Inning_3_leadoff,4-Seam Fastball
+822991,2026-04-26,Inning_2_leadoff,Sinker
+822991,2026-04-26,Batter_3,4-Seam Fastball
+822991,2026-04-26,Batter_2,4-Seam Fastball
+822991,2026-04-26,Batter_1,4-Seam Fastball
+822988,2026-05-02,Inning_3_leadoff,Cutter
+822988,2026-05-02,Inning_2_leadoff,Sinker
+822988,2026-05-02,Batter_2,4-Seam Fastball
+822988,2026-05-02,Batter_1,4-Seam Fastball
+824767,2026-05-07,Inning_3_leadoff,Cutter
+824767,2026-05-07,Inning_2_leadoff,Sinker
+824767,2026-05-07,Batter_3,Cutter
+824767,2026-05-07,Batter_2,4-Seam Fastball
+824767,2026-05-07,Batter_1,4-Seam Fastball
+822815,2026-05-13,Inning_3_leadoff,4-Seam Fastball
+822815,2026-05-13,Inning_2_leadoff,Sinker
+822815,2026-05-13,Batter_3,Sinker
+822815,2026-05-13,Batter_2,4-Seam Fastball
+822815,2026-05-13,Batter_1,Sinker
+822979,2026-05-19,Inning_3_leadoff,Sweeper
+822979,2026-05-19,Inning_2_leadoff,Changeup
+822979,2026-05-19,Batter_3,4-Seam Fastball
+822979,2026-05-19,Batter_2,4-Seam Fastball
+822979,2026-05-19,Batter_1,4-Seam Fastball
+824837,2026-05-26,Inning_2_leadoff,Cutter
+824837,2026-05-26,Batter_3,Sweeper
+824837,2026-05-26,Batter_2,4-Seam Fastball
+824837,2026-05-26,Batter_1,Sinker
+822974,2026-06-01,Inning_3_leadoff,Sweeper
+822974,2026-06-01,Inning_2_leadoff,Sinker
+822974,2026-06-01,Batter_3,4-Seam Fastball
+822974,2026-06-01,Batter_2,Sinker
+822974,2026-06-01,Batter_1,4-Seam Fastball
+823857,2026-06-07,Inning_3_leadoff,Sweeper
+823857,2026-06-07,Inning_2_leadoff,Sinker
+823857,2026-06-07,Batter_3,Cutter
+823857,2026-06-07,Batter_2,Sweeper
+823857,2026-06-07,Batter_1,Sinker
+824019,2026-06-13,Inning_3_leadoff,Cutter
+824019,2026-06-13,Inning_2_leadoff,Cutter
+824019,2026-06-13,Batter_3,Cutter
+824019,2026-06-13,Batter_2,4-Seam Fastball
+824019,2026-06-13,Batter_1,Sinker
+822966,2026-06-19,Inning_3_leadoff,Sinker
+822966,2026-06-19,Inning_2_leadoff,Sinker
+822966,2026-06-19,Batter_3,4-Seam Fastball
+822966,2026-06-19,Batter_2,Sinker
+822966,2026-06-19,Batter_1,4-Seam Fastball
+822965,2026-06-24,Inning_3_leadoff,Sweeper
+822965,2026-06-24,Inning_2_leadoff,4-Seam Fastball
+822965,2026-06-24,Batter_3,Curveball
+822965,2026-06-24,Batter_2,Sweeper
+822965,2026-06-24,Batter_1,4-Seam Fastball
+824096,2026-06-30,Inning_3_leadoff,Changeup
+824096,2026-06-30,Inning_2_leadoff,Changeup
+824096,2026-06-30,Batter_3,Curveball
+824096,2026-06-30,Batter_2,Sinker
+824096,2026-06-30,Batter_1,Sinker

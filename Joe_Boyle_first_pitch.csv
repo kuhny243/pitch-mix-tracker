@@ -1,0 +1,16 @@
+game_pk,game_date,bucket,pitch_name
+823082,2026-03-28,Inning_3_leadoff,Slider
+823082,2026-03-28,Inning_2_leadoff,Slider
+823082,2026-03-28,Batter_3,4-Seam Fastball
+823082,2026-03-28,Batter_2,Sinker
+823082,2026-03-28,Batter_1,4-Seam Fastball
+823732,2026-04-03,Inning_3_leadoff,Sinker
+823732,2026-04-03,Inning_2_leadoff,Slider
+823732,2026-04-03,Batter_3,Slider
+823732,2026-04-03,Batter_2,Sinker
+823732,2026-04-03,Batter_1,4-Seam Fastball
+823000,2026-04-08,Inning_3_leadoff,4-Seam Fastball
+823000,2026-04-08,Inning_2_leadoff,Slider
+823000,2026-04-08,Batter_3,Sinker
+823000,2026-04-08,Batter_2,Slider
+823000,2026-04-08,Batter_1,Sinker

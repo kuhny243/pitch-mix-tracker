@@ -1,0 +1,10 @@
+bucket,pitch_name,count,pct
+Batter_1,Sinker,2,100.0
+Batter_2,4-Seam Fastball,1,50.0
+Batter_2,Sinker,1,50.0
+Batter_3,4-Seam Fastball,1,50.0
+Batter_3,Changeup,1,50.0
+Inning_2_leadoff,Sinker,1,50.0
+Inning_2_leadoff,Sweeper,1,50.0
+Inning_3_leadoff,Changeup,1,50.0
+Inning_3_leadoff,Sinker,1,50.0
