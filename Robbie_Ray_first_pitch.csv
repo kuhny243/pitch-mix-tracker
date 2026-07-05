@@ -79,3 +79,8 @@ game_pk,game_date,bucket,pitch_name
 823204,2026-06-28,Batter_3,Knuckle Curve
 823204,2026-06-28,Batter_2,Slider
 823204,2026-06-28,Batter_1,Sinker
+824334,2026-07-04,Inning_3_leadoff,Changeup
+824334,2026-07-04,Inning_2_leadoff,Knuckle Curve
+824334,2026-07-04,Batter_3,Slider
+824334,2026-07-04,Batter_2,Sinker
+824334,2026-07-04,Batter_1,Knuckle Curve
