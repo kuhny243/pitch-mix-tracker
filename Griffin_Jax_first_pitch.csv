@@ -57,3 +57,8 @@ game_pk,game_date,bucket,pitch_name
 824096,2026-06-30,Batter_3,Curveball
 824096,2026-06-30,Batter_2,Sinker
 824096,2026-06-30,Batter_1,Sinker
+822958,2026-07-06,Inning_3_leadoff,Sweeper
+822958,2026-07-06,Inning_2_leadoff,Sweeper
+822958,2026-07-06,Batter_3,Sinker
+822958,2026-07-06,Batter_2,Curveball
+822958,2026-07-06,Batter_1,4-Seam Fastball
