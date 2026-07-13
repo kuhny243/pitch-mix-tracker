@@ -39,3 +39,6 @@ game_pk,game_date,bucket,pitch_name
 823848,2026-07-08,Batter_3,Sinker
 823848,2026-07-08,Batter_2,Sinker
 823848,2026-07-08,Batter_1,Curveball
+823842,2026-07-12,Batter_3,Sweeper
+823842,2026-07-12,Batter_2,Sweeper
+823842,2026-07-12,Batter_1,Curveball
