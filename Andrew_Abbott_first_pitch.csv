@@ -103,3 +103,8 @@ game_pk,game_date,bucket,pitch_name
 823112,2026-07-20,Batter_3,4-Seam Fastball
 823112,2026-07-20,Batter_2,4-Seam Fastball
 823112,2026-07-20,Batter_1,4-Seam Fastball
+823028,2026-07-26,Inning_3_leadoff,Sweeper
+823028,2026-07-26,Inning_2_leadoff,Sweeper
+823028,2026-07-26,Batter_3,Changeup
+823028,2026-07-26,Batter_2,Curveball
+823028,2026-07-26,Batter_1,4-Seam Fastball
