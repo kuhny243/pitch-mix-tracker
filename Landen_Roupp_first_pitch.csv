@@ -109,3 +109,8 @@ game_pk,game_date,bucket,pitch_name
 823270,2026-08-02,Batter_3,Curveball
 823270,2026-08-02,Batter_2,Sinker
 823270,2026-08-02,Batter_1,Sinker
+823188,2026-08-08,Inning_3_leadoff,Curveball
+823188,2026-08-08,Inning_2_leadoff,Sinker
+823188,2026-08-08,Batter_3,Sinker
+823188,2026-08-08,Batter_2,Sinker
+823188,2026-08-08,Batter_1,Sinker
