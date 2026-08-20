@@ -109,3 +109,8 @@ game_pk,game_date,bucket,pitch_name
 823185,2026-08-14,Batter_3,Knuckle Curve
 823185,2026-08-14,Batter_2,Sinker
 823185,2026-08-14,Batter_1,4-Seam Fastball
+824318,2026-08-19,Inning_3_leadoff,Cutter
+824318,2026-08-19,Inning_2_leadoff,4-Seam Fastball
+824318,2026-08-19,Batter_3,Cutter
+824318,2026-08-19,Batter_2,Sinker
+824318,2026-08-19,Batter_1,4-Seam Fastball
