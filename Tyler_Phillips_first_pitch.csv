@@ -67,3 +67,8 @@ game_pk,game_date,bucket,pitch_name
 823829,2026-08-13,Batter_3,Split-Finger
 823829,2026-08-13,Batter_2,Split-Finger
 823829,2026-08-13,Batter_1,Split-Finger
+823826,2026-08-25,Inning_3_leadoff,Sweeper
+823826,2026-08-25,Inning_2_leadoff,Split-Finger
+823826,2026-08-25,Batter_3,Curveball
+823826,2026-08-25,Batter_2,Sweeper
+823826,2026-08-25,Batter_1,Sinker
