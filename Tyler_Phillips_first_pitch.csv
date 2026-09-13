@@ -82,3 +82,8 @@ game_pk,game_date,bucket,pitch_name
 823822,2026-09-06,Batter_3,Sinker
 823822,2026-09-06,Batter_2,Sweeper
 823822,2026-09-06,Batter_1,Curveball
+823819,2026-09-12,Inning_3_leadoff,Split-Finger
+823819,2026-09-12,Inning_2_leadoff,Slider
+823819,2026-09-12,Batter_3,Sweeper
+823819,2026-09-12,Batter_2,Sweeper
+823819,2026-09-12,Batter_1,Sinker
