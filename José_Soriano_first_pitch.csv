@@ -144,3 +144,8 @@ game_pk,game_date,bucket,pitch_name
 824957,2026-09-08,Batter_3,Slider
 824957,2026-09-08,Batter_2,Sinker
 824957,2026-09-08,Batter_1,Sinker
+822765,2026-09-14,Inning_3_leadoff,Sinker
+822765,2026-09-14,Inning_2_leadoff,Knuckle Curve
+822765,2026-09-14,Batter_3,Knuckle Curve
+822765,2026-09-14,Batter_2,Sinker
+822765,2026-09-14,Batter_1,Sinker
