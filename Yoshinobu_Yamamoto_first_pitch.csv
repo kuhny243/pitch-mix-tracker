@@ -119,7 +119,7 @@ game_pk,game_date,bucket,pitch_name
 824879,2026-08-27,Batter_3,Cutter
 824879,2026-08-27,Batter_2,Curveball
 824879,2026-08-27,Batter_1,Split-Finger
-823906,2026-09-02,Inning_3_leadoff,4-Seam Fastball
+823906,2026-09-02,Inning_3_leadoff,Sinker
 823906,2026-09-02,Inning_2_leadoff,Slider
 823906,2026-09-02,Batter_3,Cutter
 823906,2026-09-02,Batter_2,Curveball
@@ -129,3 +129,8 @@ game_pk,game_date,bucket,pitch_name
 823900,2026-09-09,Batter_3,Cutter
 823900,2026-09-09,Batter_2,Curveball
 823900,2026-09-09,Batter_1,Curveball
+824466,2026-09-15,Inning_3_leadoff,Sinker
+824466,2026-09-15,Inning_2_leadoff,Sinker
+824466,2026-09-15,Batter_3,Sinker
+824466,2026-09-15,Batter_2,Split-Finger
+824466,2026-09-15,Batter_1,4-Seam Fastball
