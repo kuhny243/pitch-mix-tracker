@@ -124,7 +124,7 @@ game_pk,game_date,bucket,pitch_name
 823340,2026-09-01,Batter_3,Cutter
 823340,2026-09-01,Batter_2,Sweeper
 823340,2026-09-01,Batter_1,Cutter
-823175,2026-09-07,Inning_3_leadoff,Cutter
+823175,2026-09-07,Inning_3_leadoff,4-Seam Fastball
 823175,2026-09-07,Inning_2_leadoff,Sinker
 823175,2026-09-07,Batter_3,Cutter
 823175,2026-09-07,Batter_2,Sweeper
@@ -133,4 +133,4 @@ game_pk,game_date,bucket,pitch_name
 823171,2026-09-13,Inning_2_leadoff,Sinker
 823171,2026-09-13,Batter_3,Sweeper
 823171,2026-09-13,Batter_2,Sweeper
-823171,2026-09-13,Batter_1,Cutter
+823171,2026-09-13,Batter_1,4-Seam Fastball
